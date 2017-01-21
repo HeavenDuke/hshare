@@ -18,7 +18,9 @@
         }, {
             platform: "wechat"
         }, {
-            platform: "weibo"
+            platform: "sinaweibo",
+            icon: "https://img.t.sinajs.cn/t4/appstyle/widget/images/shareButton/share_icon_mini.png?id=1375775002754",
+            text: "新浪微博"
         }, {
             platform: "douban",
             icon: "https://img3.doubanio.com/pics/fw2douban_s.png",
@@ -38,7 +40,9 @@
         }, {
             platform: "wechat"
         }, {
-            platform: "weibo"
+            platform: "sinaweibo",
+            icon: "https://img.t.sinajs.cn/t4/appstyle/widget/images/shareButton/share_icon_mini.png?id=1375775002754",
+            text: "新浪微博"
         }, {
             platform: "douban",
             icon: "https://img3.doubanio.com/pics/fw2douban_s.png",
@@ -58,7 +62,9 @@
         }, {
             platform: "wechat"
         }, {
-            platform: "weibo"
+            platform: "sinaweibo",
+            icon: "https://img.t.sinajs.cn/t4/appstyle/widget/images/shareButton/share_icon_mini.png?id=1375775002754",
+            text: "新浪微博"
         }, {
             platform: "douban",
             icon: "https://img3.doubanio.com/pics/fw2douban_s.png",
@@ -136,10 +142,20 @@
         var _renderRenren = function (icon, text) {
             var size = sizes.includes(opts.size) ? opts.size : "medium";
             if (opts.renderText) {
-                return "<a class='hshare hshare-" + size + "' onclick=\"javascript:void((function(s,d,e){var f='http://share.renren.com/share/buttonshare?link=',u=location.href,l='',p=[e(u),'&title=',e(l)].join('');function a(){if(!window.open([f,p].join(''),'xnshare',['toolbar=0,status=0,resizable=1,width=626,height=436,left=',(s.width-626)/2,',top=',(s.height-436)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else a();})(screen,document,encodeURIComponent));\" alt='分享到人人网'><img src='" + icon + "' />" + text + "</a>";
+                return "<a class='hshare hshare-" + size + "' href=\"javascript:void((function(s,d,e){var f='http://share.renren.com/share/buttonshare?link=',u=location.href,l='',p=[e(u),'&title=',e(l)].join('');function a(){if(!window.open([f,p].join(''),'xnshare',['toolbar=0,status=0,resizable=1,width=626,height=436,left=',(s.width-626)/2,',top=',(s.height-436)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else a();})(screen,document,encodeURIComponent));\" alt='分享到人人网'><img src='" + icon + "' />" + text + "</a>";
             }
             else {
-                return "<a class='hshare hshare-" + size + "' onclick=\"javascript:void((function(s,d,e){var f='http://share.renren.com/share/buttonshare?link=',u=location.href,l='',p=[e(u),'&title=',e(l)].join('');function a(){if(!window.open([f,p].join(''),'xnshare',['toolbar=0,status=0,resizable=1,width=626,height=436,left=',(s.width-626)/2,',top=',(s.height-436)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else a();})(screen,document,encodeURIComponent));\" alt='分享到人人网'><img src='" + icon + "' /></a>";
+                return "<a class='hshare hshare-" + size + "' href=\"javascript:void((function(s,d,e){var f='http://share.renren.com/share/buttonshare?link=',u=location.href,l='',p=[e(u),'&title=',e(l)].join('');function a(){if(!window.open([f,p].join(''),'xnshare',['toolbar=0,status=0,resizable=1,width=626,height=436,left=',(s.width-626)/2,',top=',(s.height-436)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else a();})(screen,document,encodeURIComponent));\" alt='分享到人人网'><img src='" + icon + "' /></a>";
+            }
+        };
+
+        var _renderSinaWeibo = function (icon, text) {
+            var size = sizes.includes(opts.size) ? opts.size : "medium";
+            if (opts.renderText) {
+                return "<a class='hshare hshare-" + size + "' href=\"javascript:void((function(s,d,e){try{}catch(e){}var f='http://v.t.sina.com.cn/share/share.php?',u=d.location.href,p=['url=',e(u),'&title=',e(d.title),'&appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));\"><img src='" + icon + "' alt='分享到新浪'/>" + text + "</a>";
+            }
+            else {
+                return "<a class='hshare hshare-" + size + "' href=\"javascript:void((function(s,d,e){try{}catch(e){}var f='http://v.t.sina.com.cn/share/share.php?',u=d.location.href,p=['url=',e(u),'&title=',e(d.title),'&appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));\"><img src='" + icon + "' alt='分享到新浪'/></a>";
             }
         };
 
