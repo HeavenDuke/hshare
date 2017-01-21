@@ -118,52 +118,52 @@
 
         var _renderWechat = function (icon, text) {
             var size = sizes.includes(opts.size) ? opts.size : "medium";
-            if (opts.renderText) {
-                return "<a class='hshare hshare-" + size + "' href='https://cli.im/api/qrcode' target='_blank' title='分享到微信'><img src=" + icon + " alt='分享到微信' />" + text + "<\/a>";
-            }
-            else {
+            //if (opts.renderText) {
+            //    return "<a class='hshare hshare-" + size + "' href='https://cli.im/api/qrcode' target='_blank' title='分享到微信'><img src=" + icon + " alt='分享到微信' />" + text + "<\/a>";
+            //}
+            //else {
                 return "<a class='hshare hshare-" + size + "' href='https://cli.im/api/qrcode' target='_blank' title='分享到微信'><img src=" + icon + " alt='分享到微信' /><\/a>";
-            }
+            //}
         };
 
         var _renderQzone = function (icon, text) {
             var size = sizes.includes(opts.size) ? opts.size : "medium";
-            if (opts.renderText) {
-                return "<a class='hshare hshare-" + size + "' href='http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=" + url + "&title=" + title + "' target='_blank'  title='分享到QQ空间'><img src=" + icon + " alt='分享到QQ空间' />" + text + "<\/a>";
-            }
-            else {
+            //if (opts.renderText) {
+            //    return "<a class='hshare hshare-" + size + "' href='http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=" + url + "&title=" + title + "' target='_blank'  title='分享到QQ空间'><img src=" + icon + " alt='分享到QQ空间' />" + text + "<\/a>";
+            //}
+            //else {
                 return "<a class='hshare hshare-" + size + "' href='http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=" + url + "&title=" + title + "' target='_blank'  title='分享到QQ空间'><img src=" + icon + " alt='分享到QQ空间' /><\/a>";
-            }
+            //}
         };
 
         var _renderDouban = function (icon, text) {
             var size = sizes.includes(opts.size) ? opts.size : "medium";
-            if (opts.renderText) {
-                return "<a class='hshare hshare-" + size + "'  href=\"javascript:void(function(){var w=window,d=document,e=encodeURIComponent,s1=window.getSelection,s2=d.getSelection,s3=d.selection,s=s1?s1():s2?s2():s3?s3.createRange().text:'',r='https://www.douban.com/recommend/?url='+e(w.location.href)+'&title='+e(d.title)+'&sel='+e(s)+'&v=1',w=450,h=330,x=function(){if(!window.open(r,'douban','toolbar=0,resizable=1,scrollbars=yes,status=1,width='+w+',height='+h+',left='+(screen.width-w)/2+',top='+(screen.height-h)/2))location.href=r+'&r=1'};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})()\"><img src='" + icon + "' alt='推荐到豆瓣' />" + text + "</a>";
-            }
-            else {
+            //if (opts.renderText) {
+            //    return "<a class='hshare hshare-" + size + "'  href=\"javascript:void(function(){var w=window,d=document,e=encodeURIComponent,s1=window.getSelection,s2=d.getSelection,s3=d.selection,s=s1?s1():s2?s2():s3?s3.createRange().text:'',r='https://www.douban.com/recommend/?url='+e(w.location.href)+'&title='+e(d.title)+'&sel='+e(s)+'&v=1',w=450,h=330,x=function(){if(!window.open(r,'douban','toolbar=0,resizable=1,scrollbars=yes,status=1,width='+w+',height='+h+',left='+(screen.width-w)/2+',top='+(screen.height-h)/2))location.href=r+'&r=1'};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})()\"><img src='" + icon + "' alt='推荐到豆瓣' />" + text + "</a>";
+            //}
+            //else {
                 return "<a class='hshare hshare-" + size + "'  href=\"javascript:void(function(){var w=window,d=document,e=encodeURIComponent,s1=window.getSelection,s2=d.getSelection,s3=d.selection,s=s1?s1():s2?s2():s3?s3.createRange().text:'',r='https://www.douban.com/recommend/?url='+e(w.location.href)+'&title='+e(d.title)+'&sel='+e(s)+'&v=1',w=450,h=330,x=function(){if(!window.open(r,'douban','toolbar=0,resizable=1,scrollbars=yes,status=1,width='+w+',height='+h+',left='+(screen.width-w)/2+',top='+(screen.height-h)/2))location.href=r+'&r=1'};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})()\"><img src='" + icon + "' alt='推荐到豆瓣' /></a>";
-            }
+            //}
         };
 
         var _renderRenren = function (icon, text) {
             var size = sizes.includes(opts.size) ? opts.size : "medium";
-            if (opts.renderText) {
-                return "<a class='hshare hshare-" + size + "' href=\"javascript:void((function(s,d,e){var f='http://share.renren.com/share/buttonshare?link=',u=location.href,l='',p=[e(u),'&title=',e(l)].join('');function a(){if(!window.open([f,p].join(''),'xnshare',['toolbar=0,status=0,resizable=1,width=626,height=436,left=',(s.width-626)/2,',top=',(s.height-436)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else a();})(screen,document,encodeURIComponent));\" alt='分享到人人网'><img src='" + icon + "' />" + text + "</a>";
-            }
-            else {
+            //if (opts.renderText) {
+            //    return "<a class='hshare hshare-" + size + "' href=\"javascript:void((function(s,d,e){var f='http://share.renren.com/share/buttonshare?link=',u=location.href,l='',p=[e(u),'&title=',e(l)].join('');function a(){if(!window.open([f,p].join(''),'xnshare',['toolbar=0,status=0,resizable=1,width=626,height=436,left=',(s.width-626)/2,',top=',(s.height-436)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else a();})(screen,document,encodeURIComponent));\" alt='分享到人人网'><img src='" + icon + "' />" + text + "</a>";
+            //}
+            //else {
                 return "<a class='hshare hshare-" + size + "' href=\"javascript:void((function(s,d,e){var f='http://share.renren.com/share/buttonshare?link=',u=location.href,l='',p=[e(u),'&title=',e(l)].join('');function a(){if(!window.open([f,p].join(''),'xnshare',['toolbar=0,status=0,resizable=1,width=626,height=436,left=',(s.width-626)/2,',top=',(s.height-436)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else a();})(screen,document,encodeURIComponent));\" alt='分享到人人网'><img src='" + icon + "' /></a>";
-            }
+            //}
         };
 
         var _renderSinaWeibo = function (icon, text) {
             var size = sizes.includes(opts.size) ? opts.size : "medium";
-            if (opts.renderText) {
-                return "<a class='hshare hshare-" + size + "' href=\"javascript:void((function(s,d,e){try{}catch(e){}var f='http://v.t.sina.com.cn/share/share.php?',u=d.location.href,p=['url=',e(u),'&title=',e(d.title)].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));\"><img src='" + icon + "' alt='分享到新浪'/>" + text + "</a>";
-            }
-            else {
+            //if (opts.renderText) {
+            //    return "<a class='hshare hshare-" + size + "' href=\"javascript:void((function(s,d,e){try{}catch(e){}var f='http://v.t.sina.com.cn/share/share.php?',u=d.location.href,p=['url=',e(u),'&title=',e(d.title)].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));\"><img src='" + icon + "' alt='分享到新浪'/>" + text + "</a>";
+            //}
+            //else {
                 return "<a class='hshare hshare-" + size + "' href=\"javascript:void((function(s,d,e){try{}catch(e){}var f='http://v.t.sina.com.cn/share/share.php?',u=d.location.href,p=['url=',e(u),'&title=',e(d.title)].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));\"><img src='" + icon + "' alt='分享到新浪'/></a>";
-            }
+            //}
         };
 
         return this.each(function () {
