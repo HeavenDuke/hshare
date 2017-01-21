@@ -1,0 +1,23 @@
+body {
+    font-size: 100px;
+}
+
+a.hshare-large img {
+    width: 15px;
+    height: 15px;
+}
+
+a.hshare-medium img {
+    width: 10px;
+    height: 10px;
+}
+
+a.hshare-small img {
+    width: 5px;
+    height: 5px;
+}
+
+a.hshare-*:hover, a.hshare-*:visited, a.hshare-*:link, a.hshare-*:active {
+    color: black;
+    text-decoration: none;
+}
