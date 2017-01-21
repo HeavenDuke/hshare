@@ -1,23 +1,20 @@
-body {
-    font-size: 100px;
+a.hshare-large img {
+    width: 25px;
+    height: 25px;
 }
 
-a.hshare-large img {
+a.hshare-medium img {
+    width: 20px;
+    height: 20px;
+}
+
+a.hshare-small img {
     width: 15px;
     height: 15px;
 }
 
-a.hshare-medium img {
-    width: 10px;
-    height: 10px;
-}
-
-a.hshare-small img {
-    width: 5px;
-    height: 5px;
-}
-
-a.hshare-*:hover, a.hshare-*:visited, a.hshare-*:link, a.hshare-*:active {
+a.hshare {
     color: black;
     text-decoration: none;
+    padding: 2px 2px 2px 2px;
 }
