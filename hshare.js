@@ -16,7 +16,9 @@
         }, {
             platform: "qq"
         }, {
-            platform: "wechat"
+            platform: "wechat",
+            icon: "https://open.weixin.qq.com/zh_CN/htmledition/res/assets/res-design-download/icon64_appwx_logo.png",
+            text: "微信"
         }, {
             platform: "sinaweibo",
             icon: "https://img.t.sinajs.cn/t4/appstyle/widget/images/shareButton/share_icon_mini.png?id=1375775002754",
@@ -38,7 +40,9 @@
         }, {
             platform: "qq"
         }, {
-            platform: "wechat"
+            platform: "wechat",
+            icon: "https://open.weixin.qq.com/zh_CN/htmledition/res/assets/res-design-download/icon64_appwx_logo.png",
+            text: "微信"
         }, {
             platform: "sinaweibo",
             icon: "https://img.t.sinajs.cn/t4/appstyle/widget/images/shareButton/share_icon_mini.png?id=1375775002754",
@@ -60,7 +64,9 @@
         }, {
             platform: "qq"
         }, {
-            platform: "wechat"
+            platform: "wechat",
+            icon: "https://open.weixin.qq.com/zh_CN/htmledition/res/assets/res-design-download/icon64_appwx_logo.png",
+            text: "微信"
         }, {
             platform: "sinaweibo",
             icon: "https://img.t.sinajs.cn/t4/appstyle/widget/images/shareButton/share_icon_mini.png?id=1375775002754",
@@ -101,21 +107,22 @@
                     case "renren":
                         return _renderRenren(icon, text);
                         break;
-                    case "kaixin":
-                        return _renderKaixin(icon, text);
-                        break;
-                    case "txweibo":
-                        return _renderTXWeibo(icon, text);
-                        break;
-                    case "linkage":
-                        return _renderLinkage(icon, text);
-                        break;
                     case "douban":
                         return _renderDouban(icon, text);
                         break;
                     default:
                         throw Error("invalid platform");
                 }
+            }
+        };
+
+        var _renderWechat = function (icon, text) {
+            var size = sizes.includes(opts.size) ? opts.size : "medium";
+            if (opts.renderText) {
+                return "<a class='hshare hshare-" + size + "' href='https://cli.im/api/qrcode' target='_blank' title='分享到微信'><img src=" + icon + " alt='分享到微信' />" + text + "<\/a>";
+            }
+            else {
+                return "<a class='hshare hshare-" + size + "' href='https://cli.im/api/qrcode' target='_blank' title='分享到微信'><img src=" + icon + " alt='分享到微信' /><\/a>";
             }
         };
 
@@ -152,10 +159,10 @@
         var _renderSinaWeibo = function (icon, text) {
             var size = sizes.includes(opts.size) ? opts.size : "medium";
             if (opts.renderText) {
-                return "<a class='hshare hshare-" + size + "' href=\"javascript:void((function(s,d,e){try{}catch(e){}var f='http://v.t.sina.com.cn/share/share.php?',u=d.location.href,p=['url=',e(u),'&title=',e(d.title),'&appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));\"><img src='" + icon + "' alt='分享到新浪'/>" + text + "</a>";
+                return "<a class='hshare hshare-" + size + "' href=\"javascript:void((function(s,d,e){try{}catch(e){}var f='http://v.t.sina.com.cn/share/share.php?',u=d.location.href,p=['url=',e(u),'&title=',e(d.title)].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));\"><img src='" + icon + "' alt='分享到新浪'/>" + text + "</a>";
             }
             else {
-                return "<a class='hshare hshare-" + size + "' href=\"javascript:void((function(s,d,e){try{}catch(e){}var f='http://v.t.sina.com.cn/share/share.php?',u=d.location.href,p=['url=',e(u),'&title=',e(d.title),'&appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));\"><img src='" + icon + "' alt='分享到新浪'/></a>";
+                return "<a class='hshare hshare-" + size + "' href=\"javascript:void((function(s,d,e){try{}catch(e){}var f='http://v.t.sina.com.cn/share/share.php?',u=d.location.href,p=['url=',e(u),'&title=',e(d.title)].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));\"><img src='" + icon + "' alt='分享到新浪'/></a>";
             }
         };
 
