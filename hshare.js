@@ -97,23 +97,26 @@
                 switch(platform) {
                     case "qzone":
                         return _renderQzone(icon, text);
-                        break;
+                    case "qq":
+                        return __renderQQ(icon, text);
                     case "wechat":
                         return _renderWechat(icon, text);
-                        break;
                     case "sinaweibo":
                         return _renderSinaWeibo(icon, text);
-                        break;
                     case "renren":
                         return _renderRenren(icon, text);
-                        break;
                     case "douban":
                         return _renderDouban(icon, text);
-                        break;
                     default:
                         throw Error("invalid platform");
+                        break;
                 }
             }
+        };
+
+        var __renderQQ = function (icon, text) {
+            var size = sizes.includes(opts.size) ? opts.size : "medium";
+            return "<a class='hshare hshare-" + size + "' href='http://connect.qq.com/widget/shareqq/index.html?title=" + title + "&url=" + url + "' target='_blank' title='分享到QQ好友'><img src=" + icon + " alt='分享到QQ好友'/></a>"
         };
 
         var _renderWechat = function (icon, text) {
