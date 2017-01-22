@@ -88,12 +88,17 @@
         copyLink: {
             default: false,
             icon: "https://ohtikzqed.bkt.clouddn.com/copylink.png"
+        },
+        print: {
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/print.png"
         }
     };
 
     var defaults = {
         size: "small",
         copyLink: true,
+        print: false,
         platforms: []
     };
 
@@ -196,6 +201,10 @@
             return "<a class='hshare hshare-" + size + "' title='复制链接'><img alt='复制链接' src='" + icon + "'></a>";
         };
 
+        var _renderPrintLink = function (icon) {
+            return "<a class='hshare hshare-" + size + "' title='复制链接'><img alt='复制链接' src='" + icon + "'></a>";
+        };
+
         var _loadScript = function (url, callback)
         {
             // Adding the script tag to the head as suggested before
@@ -260,6 +269,14 @@
                     });
                 });
                 $this.append(copyEntry);
+            }
+
+            if (opts.print) {
+                var printEntry = $(_renderPrintLink(platforms.print.icon));
+                printEntry.on('click', function () {
+                    window.print();
+                });
+                $this.append(printEntry);
             }
 
         });
