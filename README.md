@@ -69,12 +69,15 @@ Currently hshare supports the following platforms, their name is shown as follow
 
 |name|platform|
 |:----:|:----:|
-|qzone|分享到QQ空间|
+|qzone|分享到QQ空间与朋友网|
 |qq|分享到QQ好友|
 |douban|推荐到豆瓣|
 |sinaweibo|分享到新浪微博|
 |renren|分享到人人网|
 |wechat|分享到微信|
+|kaixin|分享到开心网|
+|pengyou|分享到朋友网|
+|tieba|分享到百度贴吧|
 
 **Rules: **
 * if you don't specify any platform, the first 5 ones will be shown as default ones.

@@ -42,6 +42,24 @@
             default: false,
             icon: "https://ohtikzqed.bkt.clouddn.com/renren.png",
             text: "人人网"
+        },
+        kaixin: {
+            name: "kaixin",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/kaixin.png",
+            text: "开心网"
+        },
+        pengyou: {
+            name: "pengyou",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/pengyou.png",
+            text: "朋友网"
+        },
+        tieba: {
+            name: "tieba",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/tieba.png",
+            text: "百度贴吧"
         }
     };
 
@@ -72,6 +90,12 @@
                         return _renderRenren(icon);
                     case "douban":
                         return _renderDouban(icon);
+                    case "kaixin":
+                        return _renderKaixin(icon);
+                    case "pengyou":
+                        return _renderPengyou(icon);
+                    case "tieba":
+                        return _renderTieba(icon);
                     default:
                         throw Error("invalid name");
                         break;
@@ -92,15 +116,27 @@
         };
 
         var _renderDouban = function (icon) {
-            return "<a class='hshare hshare-" + size + "'  href=\"javascript:void(function(){var w=window,d=document,e=encodeURIComponent,s1=window.getSelection,s2=d.getSelection,s3=d.selection,s=s1?s1():s2?s2():s3?s3.createRange().text:'',r='https://www.douban.com/recommend/?url='+e(w.location.href)+'&title='+e(d.title)+'&sel='+e(s)+'&v=1',w=450,h=330,x=function(){if(!window.open(r,'douban','toolbar=0,resizable=1,scrollbars=yes,status=1,width='+w+',height='+h+',left='+(screen.width-w)/2+',top='+(screen.height-h)/2))location.href=r+'&r=1'};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})()\"><img src='" + icon + "' alt='推荐到豆瓣' /></a>";
+            return "<a class='hshare hshare-" + size + "'  href='http://www.douban.com/recommend?url=" + url + "&title=" + title + "'><img src='" + icon + "' alt='推荐到豆瓣' /></a>";
         };
 
         var _renderRenren = function (icon) {
-            return "<a class='hshare hshare-" + size + "' href=\"javascript:void((function(s,d,e){var f='http://share.renren.com/share/buttonshare?link=',u=location.href,l='',p=[e(u),'&title=',e(l)].join('');function a(){if(!window.open([f,p].join(''),'xnshare',['toolbar=0,status=0,resizable=1,width=626,height=436,left=',(s.width-626)/2,',top=',(s.height-436)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else a();})(screen,document,encodeURIComponent));\" alt='分享到人人网'><img src='" + icon + "' /></a>";
+            return "<a class='hshare hshare-" + size + "' href='http://share.renren.com/share/buttonshare?link=" + url + "&title=" + title + "'><img alt='分享到人人网' src='" + icon + "' /></a>";
         };
 
         var _renderSinaWeibo = function (icon) {
-            return "<a class='hshare hshare-" + size + "' href=\"javascript:void((function(s,d,e){try{}catch(e){}var f='http://v.t.sina.com.cn/share/share.php?',u=d.location.href,p=['url=',e(u),'&title=',e(d.title)].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));\"><img src='" + icon + "' alt='分享到新浪'/></a>";
+            return "<a class='hshare hshare-" + size + "' href='http://v.t.sina.com.cn/share/share.php?url=" + url + "&title=" + title + "'><img src='" + icon + "' alt='分享到新浪微博'/></a>";
+        };
+
+        var _renderKaixin = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='http://www.kaixin001.com/repaste/share.php?rtitle=" + title + "&rurl=" + url + "'><img alt='分享到开心网' src='" + icon + "' /></a>";
+        };
+
+        var _renderPengyou = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?to=pengyou&url=" + url + "&title=" + title + "' target='_blank'  title='分享到朋友网'><img src=" + icon + " alt='分享到朋友网' /><\/a>";
+        };
+
+        var _renderTieba = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='http://tieba.baidu.com/f/commit/share/openShareApi?url=" + url + "&title=" + title + "'><img alt='分享到百度贴吧' src='" + icon + "'></a>";
         };
 
         var url = encodeURIComponent(location.href);
@@ -112,7 +148,6 @@
         opts.platforms = [];
         if (options && (options.platforms instanceof Array)) {
             options.platforms.forEach(function (platform) {
-                console.log(platform);
                 opts.platforms.push($.extend({}, (platform.name && platforms[platform.name]) ? platforms[platform.name] : {}, platform));
             });
         }
