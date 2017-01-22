@@ -54,26 +54,6 @@
 
     var hShare = function (options) {
 
-        var url = encodeURIComponent(location.href);
-        var title = encodeURIComponent(document.title);
-
-        var opts = options ? options : defaults;
-        var size = sizes.includes(opts.size) ? opts.size : "medium";
-
-        if (options.platforms instanceof Array) {
-            console.log(options.platforms);
-            options.platforms.forEach(function (platform) {
-                opts.platforms.push($.extend({}, platform, (platform.name && platforms[platform.name]) ? defaultPlatforms[platform.name] : {}));
-            });
-        }
-        else {
-            for(var key in platforms) {
-                if (platforms[key].default) {
-                    opts.platforms.push(platforms[key]);
-                }
-            }
-        }
-
         var _render = function (name, icon, customize, html) {
             if (customize) {
                 return html;
@@ -123,12 +103,33 @@
             return "<a class='hshare hshare-" + size + "' href=\"javascript:void((function(s,d,e){try{}catch(e){}var f='http://v.t.sina.com.cn/share/share.php?',u=d.location.href,p=['url=',e(u),'&title=',e(d.title)].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));\"><img src='" + icon + "' alt='分享到新浪'/></a>";
         };
 
+        var url = encodeURIComponent(location.href);
+        var title = encodeURIComponent(document.title);
+
+        var opts = options ? $.extend(true, {}, options) : $.extend(true, {}, defaults);
+        var size = sizes.includes(opts.size) ? opts.size : "medium";
+
+        opts.platforms = [];
+        if (options && (options.platforms instanceof Array)) {
+            options.platforms.forEach(function (platform) {
+                console.log(platform);
+                opts.platforms.push($.extend({}, (platform.name && platforms[platform.name]) ? platforms[platform.name] : {}, platform));
+            });
+        }
+        else {
+            for(var key in platforms) {
+                if (platforms[key].default) {
+                    opts.platforms.push(platforms[key]);
+                }
+            }
+        }
+
         return this.each(function () {
             var $this = $(this);
 
-            var names = opts.platforms;
+            var _platforms = opts.platforms;
 
-            names.forEach(function (plt) {
+            _platforms.forEach(function (plt) {
                 var name = plt.name || "";
                 var icon = plt.icon || "";
                 var isCustomized = !!plt.customize;
