@@ -61,6 +61,7 @@ $("#container").hshare({
 ```
 
 Here is the option params that we currently support:
+
 |name|meaning|value|default|
 |:----:|:----:|:---:|:---:|
 |size|size of the icon|small/medium/large|medium|
