@@ -60,11 +60,40 @@
             default: false,
             icon: "https://ohtikzqed.bkt.clouddn.com/tieba.png",
             text: "百度贴吧"
+        },
+        renminweibo: {
+            name: "renminweibo",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/renminweibo.png",
+            text: "人民微博"
+        },
+        hexunweibo: {
+            name: "hexunweibo",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/hexunweibo.png",
+            text: "和讯微博"
+        },
+        tianya: {
+            name: "tianya",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/tianya.png",
+            text: "天涯网"
+        },
+        reddit: {
+            name: "reddit",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/reddit.png",
+            text: "Reddit"
+        },
+        copyLink: {
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/copylink.png"
         }
     };
 
     var defaults = {
         size: "small",
+        copyLink: true,
         platforms: []
     };
 
@@ -96,6 +125,14 @@
                         return _renderPengyou(icon);
                     case "tieba":
                         return _renderTieba(icon);
+                    case "renminweibo":
+                        return _renderRenminWeibo(icon);
+                    case "hexunweibo":
+                        return _renderHexunWeibo(icon);
+                    case "tianya":
+                        return _renderTianya(icon);
+                    case "reddit":
+                        return _renderReddit(icon);
                     default:
                         throw Error("invalid name");
                         break;
@@ -116,19 +153,19 @@
         };
 
         var _renderDouban = function (icon) {
-            return "<a class='hshare hshare-" + size + "'  href='http://www.douban.com/recommend?url=" + url + "&title=" + title + "'><img src='" + icon + "' alt='推荐到豆瓣' /></a>";
+            return "<a class='hshare hshare-" + size + "'  href='http://www.douban.com/recommend/?url=" + url + "&title=" + title + "' target='_blank'  title='推荐到豆瓣'><img src='" + icon + "' alt='推荐到豆瓣' /></a>";
         };
 
         var _renderRenren = function (icon) {
-            return "<a class='hshare hshare-" + size + "' href='http://share.renren.com/share/buttonshare?link=" + url + "&title=" + title + "'><img alt='分享到人人网' src='" + icon + "' /></a>";
+            return "<a class='hshare hshare-" + size + "' href='http://share.renren.com/share/buttonshare?link=" + url + "&title=" + title + "' target='_blank' title='分享到人人网'><img alt='分享到人人网' src='" + icon + "' /></a>";
         };
 
         var _renderSinaWeibo = function (icon) {
-            return "<a class='hshare hshare-" + size + "' href='http://v.t.sina.com.cn/share/share.php?url=" + url + "&title=" + title + "'><img src='" + icon + "' alt='分享到新浪微博'/></a>";
+            return "<a class='hshare hshare-" + size + "' href='http://v.t.sina.com.cn/share/share.php?url=" + url + "&title=" + title + "' target='_blank' title='分享到新浪微博'><img src='" + icon + "' alt='分享到新浪微博'/></a>";
         };
 
         var _renderKaixin = function (icon) {
-            return "<a class='hshare hshare-" + size + "' href='http://www.kaixin001.com/repaste/share.php?rtitle=" + title + "&rurl=" + url + "'><img alt='分享到开心网' src='" + icon + "' /></a>";
+            return "<a class='hshare hshare-" + size + "' href='http://www.kaixin001.com/repaste/share.php?rtitle=" + title + "&rurl=" + url + "' target='_blank' title='分享到开心网'><img alt='分享到开心网' src='" + icon + "' /></a>";
         };
 
         var _renderPengyou = function (icon) {
@@ -136,7 +173,44 @@
         };
 
         var _renderTieba = function (icon) {
-            return "<a class='hshare hshare-" + size + "' href='http://tieba.baidu.com/f/commit/share/openShareApi?url=" + url + "&title=" + title + "'><img alt='分享到百度贴吧' src='" + icon + "'></a>";
+            return "<a class='hshare hshare-" + size + "' href='http://tieba.baidu.com/f/commit/share/openShareApi?url=" + url + "&title=" + title + "' target='_blank' title='分享到百度贴吧'><img alt='分享到百度贴吧' src='" + icon + "'></a>";
+        };
+
+        var _renderRenminWeibo = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='http://t.people.com.cn/toshareinfo.action?url=" + url + "&title=" + title + "' target='_blank' title='分享到人民微博'><img alt='分享到人民微博' src='" + icon + "'></a>";
+        };
+
+        var _renderHexunWeibo = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='http://t.hexun.com/channel/shareweb.aspx?url=" + url + "&title=" + title + "' target='_blank' title='分享到和讯微博'><img alt='分享到和讯微博' src='" + icon + "'></a>";
+        };
+
+        var _renderTianya = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='http://open.tianya.cn/widget/send_for.php?action=send-html&shareTo=2&appkey=&url=" + url + "&title=" + title + "' target='_blank' title='分享到天涯网'><img alt='分享到天涯网' src='" + icon + "'></a>";
+        };
+
+        var _renderReddit = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='https://www.reddit.com/submit?url=" + url + "&title=" + title + "' target='_blank' title='分享到Reddit'><img alt='分享到Reddit' src='" + icon + "'></a>";
+        };
+
+        var _renderCopyLink = function (icon) {
+            return "<a class='hshare hshare-" + size + "' title='复制链接'><img alt='复制链接' src='" + icon + "'></a>";
+        };
+
+        var _loadScript = function (url, callback)
+        {
+            // Adding the script tag to the head as suggested before
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = url;
+
+            // Then bind the event to the callback function.
+            // There are several events for cross browser compatibility.
+            script.onreadystatechange = callback;
+            script.onload = callback;
+
+            // Fire the loading
+            head.appendChild(script);
         };
 
         var url = encodeURIComponent(location.href);
@@ -171,6 +245,22 @@
                 var customize = plt.customize || "";
                 $this.append($(_render(name, icon, isCustomized, customize)));
             });
+
+            if(opts.copyLink) {
+                var copyEntry = $(_renderCopyLink(platforms.copyLink.icon));
+                _loadScript("https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.16/clipboard.min.js", function () {
+                    var clipboard = new Clipboard(copyEntry[0], {
+                        text: function(trigger) {
+                            return location.href;
+                        }
+                    });
+
+                    clipboard.on('success', function(e) {
+                        alert("已复制链接到剪贴板");
+                    });
+                });
+                $this.append(copyEntry);
+            }
 
         });
     };

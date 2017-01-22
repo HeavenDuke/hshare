@@ -51,6 +51,7 @@ You can also specify options for hshare like this:
 ```javascript
 $("#container").hshare({
 	size: "large",
+	copyLink: false,
 	platforms: [{
 		name: "wechat"
 	}, {
@@ -63,6 +64,7 @@ Here is the option params that we currently support:
 |name|meaning|value|default|
 |:----:|:----:|:---:|:---:|
 |size|size of the icon|small/medium/large|medium|
+|copyLink|if a copy link entry is included|true/false|
 |platforms|platforms that will be shown|---|---|
 
 Currently hshare supports the following platforms, their name is shown as following:
@@ -78,6 +80,10 @@ Currently hshare supports the following platforms, their name is shown as follow
 |kaixin|分享到开心网|
 |pengyou|分享到朋友网|
 |tieba|分享到百度贴吧|
+|renminweibo|分享到人民微博|
+|hexunweibo|分享到和讯财经微博|
+|tianya|分享到天涯网|
+|reddit|分享到Reddit|
 
 **Rules: **
 * if you don't specify any platform, the first 5 ones will be shown as default ones.
