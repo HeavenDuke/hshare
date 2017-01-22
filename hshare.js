@@ -92,6 +92,10 @@
         print: {
             default: false,
             icon: "https://ohtikzqed.bkt.clouddn.com/print.png"
+        },
+        bookmark: {
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/bookmark.png"
         }
     };
 
@@ -99,6 +103,7 @@
         size: "small",
         copyLink: true,
         print: false,
+        bookmark: false,
         platforms: []
     };
 
@@ -202,7 +207,11 @@
         };
 
         var _renderPrintLink = function (icon) {
-            return "<a class='hshare hshare-" + size + "' title='复制链接'><img alt='复制链接' src='" + icon + "'></a>";
+            return "<a class='hshare hshare-" + size + "' title='打印页面'><img alt='打印页面' src='" + icon + "'></a>";
+        };
+
+        var _renderBookmark = function (icon) {
+            return "<a class='hshare hshare-" + size + "' title='添加到收藏夹'><img alt='添加到收藏夹' src='" + icon + "'></a>";
         };
 
         var _loadScript = function (url, callback)
@@ -277,6 +286,14 @@
                     window.print();
                 });
                 $this.append(printEntry);
+            }
+
+            if (opts.print) {
+                var bookmarkEntry = $(_renderBookmark(platforms.bookmark.icon));
+                bookmarkEntry.on('click', function () {
+                    alert("请按Ctrl + D以将本页面添加至收藏夹");
+                });
+                $this.append(bookmarkEntry);
             }
 
         });
