@@ -66,7 +66,7 @@ Here is the option params that we currently support:
 |name|meaning|value|default|
 |:----:|:----:|:---:|:---:|
 |size|size of the icon|small/medium/large|medium|
-|copyLink|if a copy link entry is included|true/false|
+|copyLink|if a copy link entry is included|true/false|true|
 |platforms|platforms that will be shown|---|---|
 
 Currently hshare supports the following platforms, their name is shown as following:
