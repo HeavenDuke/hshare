@@ -20,8 +20,8 @@ bower install --save bower
 
 **HTML**
 ```html
-<script type="text/javascript" href="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
-<script type="text/javascript" href="https://heavenduke.github.io/hshare/hshare.min.js"></script>
+<script type="text/javascript" href="jquery.min.js"></script>
+<script type="text/javascript" href="hshare.min.js"></script>
 ```
 
 The plugin depends on **jquery v1.4.3+**
