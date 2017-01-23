@@ -103,12 +103,6 @@
             icon: "https://ohtikzqed.bkt.clouddn.com/tumblr.png",
             text: "tumblr"
         },
-        youdao: {
-            name: "youdao",
-            default: false,
-            icon: "https://ohtikzqed.bkt.clouddn.com/youdao.png",
-            text: "有道书签"
-        },
         hotmail: {
             name: "hotmail",
             default: false,
@@ -285,8 +279,6 @@
                         return _renderIBaidu(icon);
                     case "baiduhome":
                         return _renderBaiduHome(icon);
-                    case "youdao":
-                        return _renderYoudao(icon);
                     case "tumblr":
                         return _renderTumblr(icon);
                     case "yixin":
@@ -331,7 +323,7 @@
         };
 
         var _renderSdoNote = function (icon) {
-            return "<a class='hshare hshare-" + size + "' href='http://note.sdo.com/tool/collect?title=" + title + "&url=" + url + "' target='_blank' title='分享到麦库记事'><img src=" + icon + " alt='分享到麦库记事'/></a>";
+            return "<a class='hshare hshare-" + size + "' href='http://note.sdo.com/tool/collect?text=" + title + "&url=" + url + "' target='_blank' title='分享到麦库记事'><img src=" + icon + " alt='分享到麦库记事'/></a>";
         };
 
         var _renderLinkedin = function (icon) {
@@ -351,11 +343,7 @@
         };
 
         var _renderBaiduHome = function (icon) {
-            return "<a class='hshare hshare-" + size + "' href='https://www.baidu.com/home/page/show/url?name=" + title + "&url=" + url + "' target='_blank' title='添加到百度首页'><img src=" + icon + " alt='添加到百度首页'/></a>";
-        };
-
-        var _renderYoudao = function (icon) {
-            return "<a class='hshare hshare-" + size + "' href='http://shuqian.youdao.com/manage?a=popwindow&title=" + title + "&url=" + url + "' target='_blank' title='分享到有道书签'><img src=" + icon + " alt='分享到有道书签'/></a>";
+            return "<a class='hshare hshare-" + size + "' href='https://www.baidu.com/home/page/show/url?name=" + title + "&url=" + url + "&from=addtobaidu' target='_blank' title='添加到百度首页'><img src=" + icon + " alt='添加到百度首页'/></a>";
         };
 
         var _renderTumblr = function (icon) {
@@ -363,7 +351,7 @@
         };
 
         var _renderYixin = function (icon) {
-            return "<a class='hshare hshare-" + size + "' href='http://open.yixin.im/share?type=webpage&title=" + title + "&url=" + url + "' target='_blank' title='分享到易信'><img src=" + icon + " alt='分享到易信'/></a>";
+            return "<a class='hshare hshare-" + size + "' href='http://open.yixin.im/share?type=text&text=" + title + url + "' target='_blank' title='分享到易信'><img src=" + icon + " alt='分享到易信'/></a>";
         };
 
         var _renderGooglePlus = function (icon) {
