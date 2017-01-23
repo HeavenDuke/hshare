@@ -79,11 +79,131 @@
             icon: "https://ohtikzqed.bkt.clouddn.com/tianya.png",
             text: "天涯网"
         },
+        yixin: {
+            name: "yixin",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/yixin.png",
+            text: "易信"
+        },
+        club189: {
+            name: "club189",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/club189.png",
+            text: "翼友圈"
+        },
+        googleplus: {
+            name: "googleplus",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/googleplus.png",
+            text: "Google+"
+        },
+        tumblr: {
+            name: "tumblr",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/tumblr.png",
+            text: "tumblr"
+        },
+        youdao: {
+            name: "youdao",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/youdao.png",
+            text: "有道书签"
+        },
+        hotmail: {
+            name: "hotmail",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/hotmail.png",
+            text: "hotmail邮箱"
+        },
         reddit: {
             name: "reddit",
             default: false,
             icon: "https://ohtikzqed.bkt.clouddn.com/reddit.png",
             text: "Reddit"
+        },
+        ibaidu: {
+            name: "ibaidu",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/ibaidu.png",
+            text: "iBaidu"
+        },
+        baiduhome: {
+            name: "baiduhome",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/baiduhome.png",
+            text: "百度首页"
+        },
+        linkedin: {
+            name: "linkedin",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/linkedin.png",
+            text: "linkedin"
+        },
+        twitter: {
+            name: "twitter",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/twitter.png",
+            text: "Twitter"
+        },
+        facebook: {
+            name: "facebook",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/facebook.png",
+            text: "Facebook"
+        },
+        feixin: {
+            name: "feixin",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/feixin.png",
+            text: "飞信同窗"
+        },
+        youdaocloud: {
+            name: "youdaocloud",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/youdaocloud.png",
+            text: "有道云笔记"
+        },
+        qingbiji: {
+            name: "qingbiji",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/qingbiji.png",
+            text: "轻笔记"
+        },
+        sdonote: {
+            name: "sdonote",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/sdonote.png",
+            text: "麦库记事"
+        },
+        xinhua: {
+            name: "xinhua",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/xinhua.png",
+            text: "新华微博"
+        },
+        isohu: {
+            name: "isohu",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/isohu.png",
+            text: "我的搜狐"
+        },
+        gmail: {
+            name: "gmail",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/gmail.png",
+            text: "Gmail"
+        },
+        instapaper: {
+            name: "instapaper",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/instapaper.png",
+            text: "Instapaper"
+        },
+        netvibes: {
+            name: "netvibes",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/netvibes.png",
+            text: "Netvibes"
         },
         copyLink: {
             default: false,
@@ -120,7 +240,7 @@
                     case "qzone":
                         return _renderQzone(icon);
                     case "qq":
-                        return __renderQQ(icon);
+                        return _renderQQ(icon);
                     case "wechat":
                         return _renderWechat(icon);
                     case "sinaweibo":
@@ -143,6 +263,46 @@
                         return _renderTianya(icon);
                     case "reddit":
                         return _renderReddit(icon);
+                    case "xinhua":
+                        return _renderXinhua(icon);
+                    case "feixin":
+                        return _renderFeixin(icon);
+                    case "isohu":
+                        return _renderISohu(icon);
+                    case "youdaocloud":
+                        return _renderYoudaoCloud(icon);
+                    case "qingbiji":
+                        return _renderQingbiji(icon);
+                    case "sdonote":
+                        return _renderSdoNote(icon);
+                    case "linkedin":
+                        return _renderLinkedin(icon);
+                    case "twitter":
+                        return _renderTwitter(icon);
+                    case "facebook":
+                        return _renderFacebook(icon);
+                    case "ibaidu":
+                        return _renderIBaidu(icon);
+                    case "baiduhome":
+                        return _renderBaiduHome(icon);
+                    case "youdao":
+                        return _renderYoudao(icon);
+                    case "tumblr":
+                        return _renderTumblr(icon);
+                    case "yixin":
+                        return _renderYixin(icon);
+                    case "googleplus":
+                        return _renderGooglePlus(icon);
+                    case "club189":
+                        return _renderClub189(icon);
+                    case "hotmail":
+                        return _renderHotmail(icon);
+                    case "gmail":
+                        return _renderGmail(icon);
+                    case "instapaper":
+                        return _renderInstapaper(icon);
+                    case "netvibes":
+                        return _renderNetvibes(icon);
                     default:
                         throw Error("invalid name");
                         break;
@@ -150,7 +310,87 @@
             }
         };
 
-        var __renderQQ = function (icon) {
+        var _renderXinhua = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='http://t.home.news.cn/share.jsp?title=" + title + "&url=" + url + "' target='_blank' title='分享到新华微博'><img src=" + icon + " alt='分享到新华微博'/></a>";
+        };
+
+        var _renderFeixin = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='http://i.feixin.10086.cn/apps/share/share?title=" + title + "&url=" + url + "' target='_blank' title='分享到飞信同窗'><img src=" + icon + " alt='分享到飞信同窗'/></a>";
+        };
+
+        var _renderISohu = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='http://i.sohu.com/a/app/mblog/add.htm?title=" + title + "&link=" + url + "' target='_blank' title='分享到我的搜狐'><img src=" + icon + " alt='分享到我的搜狐'/></a>";
+        };
+
+        var _renderYoudaoCloud = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='http://note.youdao.com/memory/?title=" + title + "&url=" + url + "' target='_blank' title='分享到有道云笔记'><img src=" + icon + " alt='分享到有道云笔记'/></a>";
+        };
+
+        var _renderQingbiji = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='http://www.qingbiji.cn/shareToQingBiJi?title=" + title + "&url=" + url + "' target='_blank' title='分享到轻笔记'><img src=" + icon + " alt='分享到轻笔记'/></a>";
+        };
+
+        var _renderSdoNote = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='http://note.sdo.com/tool/collect?title=" + title + "&url=" + url + "' target='_blank' title='分享到麦库记事'><img src=" + icon + " alt='分享到麦库记事'/></a>";
+        };
+
+        var _renderLinkedin = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='https://www.linkedin.com/shareArticle?mini=true&ro=true&armin=armin&title=" + title + "&url=" + url + "' target='_blank' title='分享到LinkedIn'><img src=" + icon + " alt='分享到LinkedIn'/></a>";
+        };
+
+        var _renderTwitter = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='https://twitter.com/intent/tweet?text=" + title + url + "' target='_blank' title='分享到Twitter'><img src=" + icon + " alt='分享到Twitter'/></a>";
+        };
+
+        var _renderFacebook = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='http://www.facebook.com/sharer.php?t=" + title + "&u=" + url + "' target='_blank' title='分享到Facebook'><img src=" + icon + " alt='分享到Facebook'/></a>";
+        };
+
+        var _renderIBaidu = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='http://i.baidu.com/store/?t=" + title + "&url=" + url + "' target='_blank' title='分享到iBaidu'><img src=" + icon + " alt='分享到iBaidu'/></a>";
+        };
+
+        var _renderBaiduHome = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='https://www.baidu.com/home/page/show/url?name=" + title + "&url=" + url + "' target='_blank' title='添加到百度首页'><img src=" + icon + " alt='添加到百度首页'/></a>";
+        };
+
+        var _renderYoudao = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='http://shuqian.youdao.com/manage?a=popwindow&title=" + title + "&url=" + url + "' target='_blank' title='分享到有道书签'><img src=" + icon + " alt='分享到有道书签'/></a>";
+        };
+
+        var _renderTumblr = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='https://www.tumblr.com/widgets/share/tool?shareSource=legacy&title=" + title + "&url=" + url + "' target='_blank' title='分享到Tumblr'><img src=" + icon + " alt='分享到Tumblr'/></a>";
+        };
+
+        var _renderYixin = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='http://open.yixin.im/share?type=webpage&title=" + title + "&url=" + url + "' target='_blank' title='分享到易信'><img src=" + icon + " alt='分享到易信'/></a>";
+        };
+
+        var _renderGooglePlus = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='https://plus.google.com/share?hl=zh-CN&url=" + url + "' target='_blank' title='分享到Google+'><img src=" + icon + " alt='分享到Google+'/></a>";
+        };
+
+        var _renderClub189 = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='http://club.189.cn/openshare/sharepage?title=" + title + "&object_url=" + url + "' target='_blank' title='分享到翼友圈'><img src=" + icon + " alt='分享到翼友圈'/></a>";
+        };
+
+        var _renderHotmail = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='https://outlook.live.com/owa/?subject=" + title + "&body=" + title + url + "&path=/mail/action/compose' target='_blank' title='通过Hotmail发送'><img src=" + icon + " alt='通过Hotmail发送'/></a>";
+        };
+
+        var _renderGmail = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='https://mail.google.com/mail/?ui=2&view=cm&fs=1&tf=1&su=" + title + "&body=" + title + url + "' target='_blank' title='通过Gmail发送'><img src=" + icon + " alt='通过Gmail发送'/></a>";
+        };
+
+        var _renderInstapaper = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='https://www.instapaper.com/edit?title=" + title + "&url=" + url + "' target='_blank' title='分享到Instapaper'><img src=" + icon + " alt='分享到Instapaper'/></a>";
+        };
+
+        var _renderNetvibes = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='http://www.netvibes.com/dashboard/1?share=true&title=" + title + "&url=" + url + "' target='_blank' title='分享到Netvibes'><img src=" + icon + " alt='分享到Netvibes'/></a>";
+        };
+
+        var _renderQQ = function (icon) {
             return "<a class='hshare hshare-" + size + "' href='http://connect.qq.com/widget/shareqq/index.html?title=" + title + "&url=" + url + "' target='_blank' title='分享到QQ好友'><img src=" + icon + " alt='分享到QQ好友'/></a>"
         };
 
@@ -216,18 +456,14 @@
 
         var _loadScript = function (url, callback)
         {
-            // Adding the script tag to the head as suggested before
             var head = document.getElementsByTagName('head')[0];
             var script = document.createElement('script');
             script.type = 'text/javascript';
             script.src = url;
 
-            // Then bind the event to the callback function.
-            // There are several events for cross browser compatibility.
             script.onreadystatechange = callback;
             script.onload = callback;
 
-            // Fire the loading
             head.appendChild(script);
         };
 
