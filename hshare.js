@@ -227,19 +227,22 @@
             name: "chouti",
             default: false,
             icon: "https://ohtikzqed.bkt.clouddn.com/chouti.png",
-            text: "chouti"
+            text: "抽屉网"
         },
         copyLink: {
             default: false,
-            icon: "https://ohtikzqed.bkt.clouddn.com/copylink.png"
+            icon: "https://ohtikzqed.bkt.clouddn.com/copylink.png",
+            text: "复制链接"
         },
         print: {
             default: false,
-            icon: "https://ohtikzqed.bkt.clouddn.com/print.png"
+            icon: "https://ohtikzqed.bkt.clouddn.com/print.png",
+            text: "打印"
         },
         bookmark: {
             default: false,
-            icon: "https://ohtikzqed.bkt.clouddn.com/bookmark.png"
+            icon: "https://ohtikzqed.bkt.clouddn.com/bookmark.png",
+            text: "收藏夹"
         }
     };
 
@@ -248,6 +251,8 @@
         copyLink: true,
         print: false,
         bookmark: false,
+        collapse: true,
+        renderText: false,
         platforms: []
     };
 
