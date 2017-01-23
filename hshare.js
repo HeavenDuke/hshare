@@ -193,6 +193,12 @@
             icon: "https://ohtikzqed.bkt.clouddn.com/instapaper.png",
             text: "Instapaper"
         },
+        pocket: {
+            name: "pocket",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/pocket.png",
+            text: "pocket"
+        },
         netvibes: {
             name: "netvibes",
             default: false,
@@ -295,11 +301,17 @@
                         return _renderInstapaper(icon);
                     case "netvibes":
                         return _renderNetvibes(icon);
+                    case "pocket":
+                        return _renderPocket(icon);
                     default:
                         throw Error("invalid name");
                         break;
                 }
             }
+        };
+
+        var _renderPocket = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='https://getpocket.com/edit.php?title=" + title + "&url=" + url + "' target='_blank' title='分享到新华微博'><img src=" + icon + " alt='分享到新华微博'/></a>";
         };
 
         var _renderXinhua = function (icon) {
