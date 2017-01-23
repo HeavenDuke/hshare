@@ -1,6 +1,5 @@
 a.hshare-large {
     height: 25px;
-    line-height: 25px;
     font-size: 25px;
 }
 
@@ -11,7 +10,6 @@ a.hshare-large img {
 
 a.hshare-medium {
     height: 20px;
-    line-height: 20px;
     font-size: 20px;
 }
 
@@ -22,18 +20,32 @@ a.hshare-medium img {
 
 a.hshare-small {
     height: 15px;
-    line-height: 15px;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 a.hshare-small img {
     width: 15px;
-    height: 15px;
+    height: 15px;;
 }
 
 a.hshare {
+    display: inline-block;
     color: black;
     text-decoration: none;
-    padding: 2px 2px 2px 2px;
+    padding-right: 2px;
     cursor: pointer;
+    vertical-align: top;
+}
+
+a.hshare:hover {
+    display: inline-block;
+    color: black;
+    text-decoration: underline;
+    padding-right: 2px;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+a.hshare img {
+    padding-right: 2px;
 }
