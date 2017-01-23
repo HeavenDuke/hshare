@@ -8,6 +8,9 @@ Here is a demo of the default platforms:
 
 ![demo picture](http://ohtikzqed.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720170121223132.jpg)
 
+## Supported Platforms
+[Platforms](https://github.com/HeavenDuke/hshare/wiki/Supported-Platforms)
+
 ## Install
 **npm**
 ```plain
@@ -70,24 +73,6 @@ Here is the option params that we currently support:
 |print|if a print page entry is included|true/false|false|
 |bookmark|if a bookmark entry is included|true/false|false|
 |platforms|platforms that will be shown|---|---|
-
-Currently hshare supports the following platforms, their name is shown as following:
-
-|name|platform|
-|:----:|:----:|
-|qzone|分享到QQ空间与朋友网|
-|qq|分享到QQ好友|
-|douban|推荐到豆瓣|
-|sinaweibo|分享到新浪微博|
-|renren|分享到人人网|
-|wechat|分享到微信|
-|kaixin|分享到开心网|
-|pengyou|分享到朋友网|
-|tieba|分享到百度贴吧|
-|renminweibo|分享到人民微博|
-|hexunweibo|分享到和讯财经微博|
-|tianya|分享到天涯网|
-|reddit|分享到Reddit|
 
 **Rules: **
 * if you don't specify any platform, the first 5 ones will be shown as default ones.
