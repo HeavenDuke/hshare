@@ -72,13 +72,9 @@ Here is the option params that we currently support:
 |copyLink|if a copy link entry is included|true/false|true|
 |print|if a print page entry is included|true/false|false|
 |bookmark|if a bookmark entry is included|true/false|false|
+|collapse|if a collapsable + is included|true/false|true|
+|renderText|if text is shown|true/false|false|
 |platforms|platforms that will be shown|---|---|
-
-**Rules: **
-* if you don't specify any platform, the first 5 ones will be shown as default ones.
-* Even if only one platform is manually specified, the default one will not be used.
-* If you specify the above platform, you won't need to specify icon resource for the linkage button, they have been included(but you may use your own if you like).
-* Apart from the supported ones, you must specify your own html code for the button.
 
 **use the supported platforms(can specify icon):**
 ```javascript
@@ -103,6 +99,19 @@ $("#container").hshare({
 	}]
 });
 ```
+
+## Rules:
+* if you don't specify any platform, the first 5 ones will be shown as default ones.
+* Even if only one platform is manually specified, the default one will not be used.
+* If you specify the above platform, you won't need to specify icon resource for the linkage button, they have been included(but you may use your own if you like).
+* Apart from the supported ones, you must specify your own html code for the button.
+* If collapse param is set to true, then all platforms that are no manually specified will be included in the + button.
+* If renderText param is set to true, then size will be disabled and icon size is set to small by default.
+
+
+## Contributors
+* [HeavenDuke](https://github.com/HeavenDuke)
+* [AsherWang](https://github.com/AsherWang)
 
 ## License
 [MIT](https://opensource.org/licenses/MIT)
