@@ -348,163 +348,163 @@
         };
 
         var _renderChouti = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='http://dig.chouti.com/digg.action?title=" + title + "&newsURL=" + url + "' target='_blank' title='分享到新华微博'><img align='top' src=" + icon + " alt='分享到新华微博'/>" + (opts.renderText == true ? text : "") + "" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='http://dig.chouti.com/digg.action?title=" + title + "&newsURL=" + url + "' target='_blank' title='分享到新华微博'><img align='top' src=" + icon + " alt='分享到新华微博'/>" + (opts.renderText == true ? text : "") + "" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderDigg = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='http://digg.com/submit?phase=2&title=" + title + "&url=" + url + "' target='_blank' title='分享到新华微博'><img align='top' src=" + icon + " alt='分享到新华微博'/>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='http://digg.com/submit?phase=2&title=" + title + "&url=" + url + "' target='_blank' title='分享到新华微博'><img align='top' src=" + icon + " alt='分享到新华微博'/>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderPocket = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='https://getpocket.com/edit.php?title=" + title + "&url=" + url + "' target='_blank' title='分享到新华微博'><img align='top' src=" + icon + " alt='分享到新华微博'/>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='https://getpocket.com/edit.php?title=" + title + "&url=" + url + "' target='_blank' title='分享到新华微博'><img align='top' src=" + icon + " alt='分享到新华微博'/>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderBuffer = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='https://buffer.com/add?text=" + title + url + "&url=" + url + "' target='_blank' title='分享到新华微博'><img align='top' src=" + icon + " alt='分享到新华微博'/>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='https://buffer.com/add?text=" + title + url + "&url=" + url + "' target='_blank' title='分享到新华微博'><img align='top' src=" + icon + " alt='分享到新华微博'/>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderHootsuite = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='https://hootsuite.com/hootlet/social-share?title=" + title + "&url=" + url + "' target='_blank' title='分享到新华微博'><img align='top' src=" + icon + " alt='分享到新华微博'/>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='https://hootsuite.com/hootlet/social-share?title=" + title + "&url=" + url + "' target='_blank' title='分享到新华微博'><img align='top' src=" + icon + " alt='分享到新华微博'/>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderXinhua = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='http://t.home.news.cn/share.jsp?title=" + title + "&url=" + url + "' target='_blank' title='分享到新华微博'><img align='top' src=" + icon + " alt='分享到新华微博'/>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='http://t.home.news.cn/share.jsp?title=" + title + "&url=" + url + "' target='_blank' title='分享到新华微博'><img align='top' src=" + icon + " alt='分享到新华微博'/>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderFeixin = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='http://i.feixin.10086.cn/apps/share/share?title=" + title + "&url=" + url + "' target='_blank' title='分享到飞信同窗'><img align='top' src=" + icon + " alt='分享到飞信同窗'/>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='http://i.feixin.10086.cn/apps/share/share?title=" + title + "&url=" + url + "' target='_blank' title='分享到飞信同窗'><img align='top' src=" + icon + " alt='分享到飞信同窗'/>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderISohu = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='http://i.sohu.com/a/app/mblog/add.htm?title=" + title + "&link=" + url + "' target='_blank' title='分享到我的搜狐'><img align='top' src=" + icon + " alt='分享到我的搜狐'/>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='http://i.sohu.com/a/app/mblog/add.htm?title=" + title + "&link=" + url + "' target='_blank' title='分享到我的搜狐'><img align='top' src=" + icon + " alt='分享到我的搜狐'/>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderYoudaoCloud = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='http://note.youdao.com/memory/?title=" + title + "&url=" + url + "' target='_blank' title='分享到有道云笔记'><img align='top' src=" + icon + " alt='分享到有道云笔记'/>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='http://note.youdao.com/memory/?title=" + title + "&url=" + url + "' target='_blank' title='分享到有道云笔记'><img align='top' src=" + icon + " alt='分享到有道云笔记'/>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderQingbiji = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='http://www.qingbiji.cn/shareToQingBiJi?title=" + title + "&url=" + url + "' target='_blank' title='分享到轻笔记'><img align='top' src=" + icon + " alt='分享到轻笔记'/>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='http://www.qingbiji.cn/shareToQingBiJi?title=" + title + "&url=" + url + "' target='_blank' title='分享到轻笔记'><img align='top' src=" + icon + " alt='分享到轻笔记'/>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderSdoNote = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='http://note.sdo.com/tool/collect?text=" + title + "&url=" + url + "' target='_blank' title='分享到麦库记事'><img align='top' src=" + icon + " alt='分享到麦库记事'/>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='http://note.sdo.com/tool/collect?text=" + title + "&url=" + url + "' target='_blank' title='分享到麦库记事'><img align='top' src=" + icon + " alt='分享到麦库记事'/>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderLinkedin = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='https://www.linkedin.com/shareArticle?mini=true&ro=true&armin=armin&title=" + title + "&url=" + url + "' target='_blank' title='分享到LinkedIn'><img align='top' src=" + icon + " alt='分享到LinkedIn'/>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='https://www.linkedin.com/shareArticle?mini=true&ro=true&armin=armin&title=" + title + "&url=" + url + "' target='_blank' title='分享到LinkedIn'><img align='top' src=" + icon + " alt='分享到LinkedIn'/>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderTwitter = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='https://twitter.com/intent/tweet?text=" + title + url + "' target='_blank' title='分享到Twitter'><img align='top' src=" + icon + " alt='分享到Twitter'/>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='https://twitter.com/intent/tweet?text=" + title + url + "' target='_blank' title='分享到Twitter'><img align='top' src=" + icon + " alt='分享到Twitter'/>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderFacebook = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='http://www.facebook.com/sharer.php?t=" + title + "&u=" + url + "' target='_blank' title='分享到Facebook'><img align='top' src=" + icon + " alt='分享到Facebook'/>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='http://www.facebook.com/sharer.php?t=" + title + "&u=" + url + "' target='_blank' title='分享到Facebook'><img align='top' src=" + icon + " alt='分享到Facebook'/>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderIBaidu = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='http://i.baidu.com/store/?t=" + title + "&url=" + url + "' target='_blank' title='分享到iBaidu'><img align='top' src=" + icon + " alt='分享到iBaidu'/>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='http://i.baidu.com/store/?t=" + title + "&url=" + url + "' target='_blank' title='分享到iBaidu'><img align='top' src=" + icon + " alt='分享到iBaidu'/>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderBaiduHome = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='https://www.baidu.com/home/page/show/url?name=" + title + "&url=" + url + "&from=addtobaidu' target='_blank' title='添加到百度首页'><img align='top' src=" + icon + " alt='添加到百度首页'/>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='https://www.baidu.com/home/page/show/url?name=" + title + "&url=" + url + "&from=addtobaidu' target='_blank' title='添加到百度首页'><img align='top' src=" + icon + " alt='添加到百度首页'/>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderTumblr = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='https://www.tumblr.com/widgets/share/tool?shareSource=legacy&title=" + title + "&url=" + url + "' target='_blank' title='分享到Tumblr'><img align='top' src=" + icon + " alt='分享到Tumblr'/>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='https://www.tumblr.com/widgets/share/tool?shareSource=legacy&title=" + title + "&url=" + url + "' target='_blank' title='分享到Tumblr'><img align='top' src=" + icon + " alt='分享到Tumblr'/>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderYixin = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='http://open.yixin.im/share?type=text&text=" + title + url + "' target='_blank' title='分享到易信'><img align='top' src=" + icon + " alt='分享到易信'/>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='http://open.yixin.im/share?type=text&text=" + title + url + "' target='_blank' title='分享到易信'><img align='top' src=" + icon + " alt='分享到易信'/>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderGooglePlus = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='https://plus.google.com/share?hl=zh-CN&url=" + url + "' target='_blank' title='分享到Google+'><img align='top' src=" + icon + " alt='分享到Google+'/>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='https://plus.google.com/share?hl=zh-CN&url=" + url + "' target='_blank' title='分享到Google+'><img align='top' src=" + icon + " alt='分享到Google+'/>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderClub189 = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='http://club.189.cn/openshare/sharepage?title=" + title + "&object_url=" + url + "' target='_blank' title='分享到翼友圈'><img align='top' src=" + icon + " alt='分享到翼友圈'/>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='http://club.189.cn/openshare/sharepage?title=" + title + "&object_url=" + url + "' target='_blank' title='分享到翼友圈'><img align='top' src=" + icon + " alt='分享到翼友圈'/>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderHotmail = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='https://outlook.live.com/owa/?subject=" + title + "&body=" + title + url + "&path=/mail/action/compose' target='_blank' title='通过Hotmail发送'><img align='top' src=" + icon + " alt='通过Hotmail发送'/>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='https://outlook.live.com/owa/?subject=" + title + "&body=" + title + url + "&path=/mail/action/compose' target='_blank' title='通过Hotmail发送'><img align='top' src=" + icon + " alt='通过Hotmail发送'/>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderGmail = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='https://mail.google.com/mail/?ui=2&view=cm&fs=1&tf=1&su=" + title + "&body=" + title + url + "' target='_blank' title='通过Gmail发送'><img align='top' src=" + icon + " alt='通过Gmail发送'/>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='https://mail.google.com/mail/?ui=2&view=cm&fs=1&tf=1&su=" + title + "&body=" + title + url + "' target='_blank' title='通过Gmail发送'><img align='top' src=" + icon + " alt='通过Gmail发送'/>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderInstapaper = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='https://www.instapaper.com/edit?title=" + title + "&url=" + url + "' target='_blank' title='分享到Instapaper'><img align='top' src=" + icon + " alt='分享到Instapaper'/>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='https://www.instapaper.com/edit?title=" + title + "&url=" + url + "' target='_blank' title='分享到Instapaper'><img align='top' src=" + icon + " alt='分享到Instapaper'/>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderNetvibes = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='http://www.netvibes.com/dashboard/1?share=true&title=" + title + "&url=" + url + "' target='_blank' title='分享到Netvibes'><img align='top' src=" + icon + " alt='分享到Netvibes'/>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='http://www.netvibes.com/dashboard/1?share=true&title=" + title + "&url=" + url + "' target='_blank' title='分享到Netvibes'><img align='top' src=" + icon + " alt='分享到Netvibes'/>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderQQ = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='http://connect.qq.com/widget/shareqq/index.html?title=" + title + "&url=" + url + "' target='_blank' title='分享到QQ好友'><img align='top' src=" + icon + " alt='分享到QQ好友'/>" + (opts.renderText == true ? text : "") + "</a>"
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='http://connect.qq.com/widget/shareqq/index.html?title=" + title + "&url=" + url + "' target='_blank' title='分享到QQ好友'><img align='top' src=" + icon + " alt='分享到QQ好友'/>" + (opts.renderText == true ? text : "") + "</a>"
         };
 
         var _renderWechat = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='https://cli.im/api/qrcode' target='_blank' title='分享到微信'><img align='top' src=" + icon + " alt='分享到微信' />" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='https://cli.im/api/qrcode' target='_blank' title='分享到微信'><img align='top' src=" + icon + " alt='分享到微信' />" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderQzone = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=" + url + "&title=" + title + "' target='_blank'  title='分享到QQ空间'><img align='top' src=" + icon + " alt='分享到QQ空间' />" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=" + url + "&title=" + title + "' target='_blank'  title='分享到QQ空间'><img align='top' src=" + icon + " alt='分享到QQ空间' />" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderDouban = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "'  href='http://www.douban.com/recommend/?url=" + url + "&title=" + title + "' target='_blank'  title='推荐到豆瓣'><img align='top' src='" + icon + "' alt='推荐到豆瓣' />" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "'  href='http://www.douban.com/recommend/?url=" + url + "&title=" + title + "' target='_blank'  title='推荐到豆瓣'><img align='top' src='" + icon + "' alt='推荐到豆瓣' />" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderRenren = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='http://share.renren.com/share/buttonshare?link=" + url + "&title=" + title + "' target='_blank' title='分享到人人网'><img align='top' alt='分享到人人网' src='" + icon + "' />" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='http://share.renren.com/share/buttonshare?link=" + url + "&title=" + title + "' target='_blank' title='分享到人人网'><img align='top' alt='分享到人人网' src='" + icon + "' />" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderSinaWeibo = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='http://v.t.sina.com.cn/share/share.php?url=" + url + "&title=" + title + "' target='_blank' title='分享到新浪微博'><img align='top' src='" + icon + "' alt='分享到新浪微博'/>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='http://v.t.sina.com.cn/share/share.php?url=" + url + "&title=" + title + "' target='_blank' title='分享到新浪微博'><img align='top' src='" + icon + "' alt='分享到新浪微博'/>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderKaixin = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='http://www.kaixin001.com/repaste/share.php?rtitle=" + title + "&rurl=" + url + "' target='_blank' title='分享到开心网'><img align='top' alt='分享到开心网' src='" + icon + "' />" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='http://www.kaixin001.com/repaste/share.php?rtitle=" + title + "&rurl=" + url + "' target='_blank' title='分享到开心网'><img align='top' alt='分享到开心网' src='" + icon + "' />" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderPengyou = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?to=pengyou&url=" + url + "&title=" + title + "' target='_blank'  title='分享到朋友网'><img align='top' src=" + icon + " alt='分享到朋友网' />" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?to=pengyou&url=" + url + "&title=" + title + "' target='_blank'  title='分享到朋友网'><img align='top' src=" + icon + " alt='分享到朋友网' />" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderTieba = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='http://tieba.baidu.com/f/commit/share/openShareApi?url=" + url + "&title=" + title + "' target='_blank' title='分享到百度贴吧'><img align='top' alt='分享到百度贴吧' src='" + icon + "'>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='http://tieba.baidu.com/f/commit/share/openShareApi?url=" + url + "&title=" + title + "' target='_blank' title='分享到百度贴吧'><img align='top' alt='分享到百度贴吧' src='" + icon + "'>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderRenminWeibo = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='http://t.people.com.cn/toshareinfo.action?url=" + url + "&title=" + title + "' target='_blank' title='分享到人民微博'><img align='top' alt='分享到人民微博' src='" + icon + "'>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='http://t.people.com.cn/toshareinfo.action?url=" + url + "&title=" + title + "' target='_blank' title='分享到人民微博'><img align='top' alt='分享到人民微博' src='" + icon + "'>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderHexunWeibo = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='http://t.hexun.com/channel/shareweb.aspx?url=" + url + "&title=" + title + "' target='_blank' title='分享到和讯微博'><img align='top' alt='分享到和讯微博' src='" + icon + "'>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='http://t.hexun.com/channel/shareweb.aspx?url=" + url + "&title=" + title + "' target='_blank' title='分享到和讯微博'><img align='top' alt='分享到和讯微博' src='" + icon + "'>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderTianya = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='http://open.tianya.cn/widget/send_for.php?action=send-html&shareTo=2&appkey=&url=" + url + "&title=" + title + "' target='_blank' title='分享到天涯网'><img align='top' alt='分享到天涯网' src='" + icon + "'>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='http://open.tianya.cn/widget/send_for.php?action=send-html&shareTo=2&appkey=&url=" + url + "&title=" + title + "' target='_blank' title='分享到天涯网'><img align='top' alt='分享到天涯网' src='" + icon + "'>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderReddit = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' href='https://www.reddit.com/submit?url=" + url + "&title=" + title + "' target='_blank' title='分享到Reddit'><img align='top' alt='分享到Reddit' src='" + icon + "'>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' href='https://www.reddit.com/submit?url=" + url + "&title=" + title + "' target='_blank' title='分享到Reddit'><img align='top' alt='分享到Reddit' src='" + icon + "'>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderCopyLink = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' title='复制链接'><img align='top' alt='复制链接' src='" + icon + "'>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' title='复制链接'><img align='top' alt='复制链接' src='" + icon + "'>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderPrintLink = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' title='打印页面'><img align='top' alt='打印页面' src='" + icon + "'>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' title='打印页面'><img align='top' alt='打印页面' src='" + icon + "'>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _renderBookmark = function (icon, text) {
-            return "<a class='hshare hshare-" + size + "' title='添加到收藏夹'><img align='top' alt='添加到收藏夹' src='" + icon + "'>" + (opts.renderText == true ? text : "") + "</a>";
+            return "<a class='hshare hshare-" + size + (opts.renderText == true ? " hshare-text" : "") + "' title='添加到收藏夹'><img align='top' alt='添加到收藏夹' src='" + icon + "'>" + (opts.renderText == true ? text : "") + "</a>";
         };
 
         var _loadScript = function (url, callback)
