@@ -55,3 +55,8 @@ a.hshare-text img {
     display: none;
     border: 2px solid black;
 }
+
+.hshare-container {
+    position: absolute;
+    border: 2px solid black;
+}

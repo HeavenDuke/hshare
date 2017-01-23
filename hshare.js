@@ -259,7 +259,9 @@
         print: false,
         bookmark: false,
         more: true,
+        maxCharNum: 5,
         renderText: false,
+        selectShare: false,
         platforms: [],
         extended: []
     };
@@ -562,6 +564,10 @@
             return result;
         };
 
+        var _renderSelectionPopupContainer = function () {
+            return "<div class='hshare-container'></div>";
+        };
+
         var _calculateLocation = function (ex, ey, ew, eh, width, height, sw, sh) {
             var result = {};
             if (ex + ew + width > sw) {
@@ -590,6 +596,18 @@
             script.onload = callback;
 
             head.appendChild(script);
+        };
+
+        var _getSelectedText = function () {
+            var txt = "";
+            if (window.getSelection) {
+                txt = window.getSelection();
+            } else if (window.document.getSelection) {
+                txt = window.document.getSelection();
+            } else if (window.document.selection) {
+                txt = window.document.selection.createRange().text;
+            }
+            return txt.toString();
         };
 
         var url = encodeURIComponent(location.href);
@@ -695,6 +713,37 @@
                     morePanel.css('display', "block");
                 }, function () {
                     morePanel.css('display', "none");
+                });
+            }
+
+            if(opts.selectShare == true) {
+                $(document).on('mousedown', function (event) {
+                    var containers = $(".hshare-container");
+                    if (containers.length != 0) {
+                        containers.remove();
+                    }
+                });
+                $(document).on('mouseup dbclick', function (event) {
+                    setTimeout(function () {
+                        var selectedText = _getSelectedText();
+                        if (selectedText.length >= opts.maxCharNum) {
+                            var container = $(_renderSelectionPopupContainer());
+                            var _options = Object.create(options);
+                            _options.selectShare = false;
+                            _options.renderText = false;
+                            _options.size = 'large';
+                            container.hshare(_options);
+                            $this.append(container);
+                            var left = event.pageX;
+                            var top = event.pageY;
+                            var width = container.outerWidth();
+                            var height = container.outerHeight();
+                            var screenWidth = $(window).width();
+                            var screenHeight = $(window).height();
+                            var location = _calculateLocation(left, top, 0, 0, width, height, screenWidth, screenHeight);
+                            container.attr("style", "left: " + location.x + "px; top: " + location.y + "px;");
+                        }
+                    }, 500);
                 });
             }
 
