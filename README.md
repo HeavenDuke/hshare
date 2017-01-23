@@ -158,7 +158,7 @@ $("#container").hshare({
         name: "pengyou"
     }, {
         name: "something",
-        customize: "<a href='some sharing action' target='_blank'><img src='some icon source'></img><a>"
+        customize: "<a href='some sharing action' target='_blank'><img src='some icon source'></img>Foobar<a>"
     }]
 });
 ```

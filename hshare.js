@@ -268,7 +268,12 @@
 
     var hShare = function (options) {
 
-        var _render = function (name, icon, text, customize, html) {
+        var _render = function (platform) {
+            var name = platform.name || "";
+            var icon = platform.icon || "";
+            var text = platform.text || "";
+            var customize = !!platform.customize;
+            var html = platform.customize || "";
             if (customize) {
                 return html;
             }
@@ -533,30 +538,22 @@
             result += "<table>";
             for(var plt in opts.extended) {
                 plt = opts.extended[plt];
-                if (row.length < 2) {
-                    row.push(plt);
-                }
-                else {
+                if (row.length >= 2) {
                     result += "<tr>";
                     row.forEach(function (item) {
-                        var name = item.name || "";
-                        var icon = item.icon || "";
-                        var text = item.text || "";
                         result += "<td>";
-                        result += _render(name, icon, text, false, "");
+                        result += _render(item);
                         result += "</td>";
                     });
                     result += "</tr>";
-                    row = [];
+                    row.splice(0, row.length);
                 }
+                row.push(plt);
             }
             result += "<tr>";
             row.forEach(function (item) {
-                var name = item.name || "";
-                var icon = item.icon || "";
-                var text = item.text || "";
                 result += "<td>";
-                result += _render(name, icon, text, false, "");
+                result += _render(item);
                 result += "</td>";
             });
             result += "</tr>";
@@ -621,7 +618,6 @@
             options.extended.forEach(function (platform) {
                 opts.extended.push($.extend({}, (platform.name && platforms[platform.name]) ? platforms[platform.name] : {}, platform));
             });
-            console.log(opts.extended)
         }
         else if (opts.more == true) {
             for(var key in platforms) {
@@ -645,12 +641,7 @@
             var _platforms = opts.platforms;
 
             _platforms.forEach(function (plt) {
-                var name = plt.name || "";
-                var icon = plt.icon || "";
-                var text = plt.text || "";
-                var isCustomized = !!plt.customize;
-                var customize = plt.customize || "";
-                $this.append($(_render(name, icon, text, isCustomized, customize)));
+                $this.append($(_render(plt)));
             });
 
             if(opts.copyLink == true) {
