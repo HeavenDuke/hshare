@@ -317,7 +317,7 @@
                         return _renderPocket(icon);
                     case "buffer":
                         return _renderBuffer(icon);
-                    case "hootuite":
+                    case "hootsuite":
                         return _renderHootsuite(icon);
                     default:
                         throw Error("invalid name");
