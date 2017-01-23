@@ -28,8 +28,6 @@ bower install --save bower
 <script type="text/javascript" href="hshare.min.js"></script>
 ```
 
-The plugin depends on **jquery v1.4.3+**
-
 ## Usage
 
 First specify a container in your html files like this:
