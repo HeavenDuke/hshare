@@ -92,7 +92,8 @@ $("#container").hshare({
 ```javascript
 $("#container").hshare({
 	platforms: [{
-		name: "qzone"
+		name: "qzone",
+		text: "QQ空间"
 	}, {
 		name: "something",
 		customize: "<a href='some sharing action' target='_blank'><img src='some icon source'></img><a>"
