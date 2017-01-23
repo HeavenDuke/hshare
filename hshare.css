@@ -49,3 +49,9 @@ a.hshare:hover {
 a.hshare-text img {
     padding-right: 2px;
 }
+
+.hshare-more-container {
+    position: absolute;
+    display: none;
+    border: 2px solid black;
+}

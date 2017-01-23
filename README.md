@@ -69,12 +69,13 @@ Here is the option params that we currently support:
 |name|meaning|value|default|
 |:----:|:----:|:---:|:---:|
 |size|size of the icon|small/medium/large|medium|
-|copyLink|if a copy link entry is included|true/false|true|
+|copyLink|if a copy link entry is included|true/false|false|
 |print|if a print page entry is included|true/false|false|
 |bookmark|if a bookmark entry is included|true/false|false|
-|collapse|if a collapsable + is included|true/false|true|
+|more|if a "+" is included|true/false|true|
 |renderText|if text is shown|true/false|false|
 |platforms|platforms that will be shown|---|---|
+|extended|platforms that will be shown in the expanded panel|---|---|
 
 **use the supported platforms(can specify icon):**
 ```javascript
@@ -84,6 +85,20 @@ $("#container").hshare({
 	}, {
 		name: "douban",
 		icon: "https://somedomain.com/douban_icon.png"
+	}]
+});
+```
+
+**use the supported platforms with text(can specify icon and text):**
+```javascript
+$("#container").hshare({
+    renderText: true,
+	platforms: [{
+		name: "qzone"
+	}, {
+		name: "douban",
+		icon: "https://somedomain.com/douban_icon.png",
+		text: "豆瓣"
 	}]
 });
 ```
@@ -98,6 +113,53 @@ $("#container").hshare({
 		name: "something",
 		customize: "<a href='some sharing action' target='_blank'><img src='some icon source'></img><a>"
 	}]
+});
+```
+
+**use the print/copyLink/bookmark platforms:**
+```javascript
+$("#container").hshare({
+    bookmark: true,
+    print: true,
+    copyLink: true,
+	platforms: [{
+		name: "qzone",
+		text: "QQ空间"
+	}]
+});
+```
+
+**use the extended platforms(by default it will include all supported platforms):**
+   ```javascript
+   $("#container").hshare({
+       bookmark: true,
+       print: true,
+       copyLink: true,
+       more: true
+   	platforms: [{
+   		name: "qzone",
+   		text: "QQ空间"
+   	}]
+   });
+   ```
+
+**customize the extended platforms:**
+```javascript
+$("#container").hshare({
+    bookmark: true,
+    print: true,
+    copyLink: true,
+    more: true
+	platforms: [{
+		name: "qzone",
+		text: "QQ空间"
+	}],
+	extended: [{
+        name: "pengyou"
+    }, {
+        name: "something",
+        customize: "<a href='some sharing action' target='_blank'><img src='some icon source'></img><a>"
+    }]
 });
 ```
 
