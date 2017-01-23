@@ -540,6 +540,10 @@
             }
         }
 
+        if (opts.renderText == true) {
+            opts.size = "small";
+        }
+
         return this.each(function () {
             var $this = $(this);
 
@@ -553,7 +557,7 @@
                 $this.append($(_render(name, icon, isCustomized, customize)));
             });
 
-            if(opts.copyLink) {
+            if(opts.copyLink == true) {
                 var copyEntry = $(_renderCopyLink(platforms.copyLink.icon));
                 _loadScript("https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.16/clipboard.min.js", function () {
                     var clipboard = new Clipboard(copyEntry[0], {
@@ -569,7 +573,7 @@
                 $this.append(copyEntry);
             }
 
-            if (opts.print) {
+            if (opts.print == true) {
                 var printEntry = $(_renderPrintLink(platforms.print.icon));
                 printEntry.on('click', function () {
                     window.print();
@@ -577,7 +581,7 @@
                 $this.append(printEntry);
             }
 
-            if (opts.print) {
+            if (opts.bookmark == true) {
                 var bookmarkEntry = $(_renderBookmark(platforms.bookmark.icon));
                 bookmarkEntry.on('click', function () {
                     alert("请按Ctrl + D以将本页面添加至收藏夹");
