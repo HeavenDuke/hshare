@@ -610,6 +610,18 @@
             return txt.toString();
         };
 
+        var _getSelectedLocation = function () {
+            var txt = "";
+            if (window.getSelection) {
+                txt = window.getSelection();
+            } else if (window.document.getSelection) {
+                txt = window.document.getSelection();
+            } else if (window.document.selection) {
+                txt = window.document.selection.createRange().text;
+            }
+            return txt.getRangeAt(0).getBoundingClientRect();
+        };
+
         var url = encodeURIComponent(location.href);
         var title = encodeURIComponent(document.title);
 
@@ -723,19 +735,21 @@
                         containers.remove();
                     }
                 });
-                $(document).on('mouseup dbclick', function (event) {
+
+                $(document).on('mouseup', function (event) {
+                    var container = $(_renderSelectionPopupContainer());
                     setTimeout(function () {
                         var selectedText = _getSelectedText();
                         if (selectedText.length >= opts.maxCharNum) {
-                            var container = $(_renderSelectionPopupContainer());
                             var _options = Object.create(options);
                             _options.selectShare = false;
                             _options.renderText = false;
                             _options.size = 'large';
                             container.hshare(_options);
                             $this.append(container);
-                            var left = event.pageX;
-                            var top = event.pageY;
+                            var sLocation = _getSelectedLocation();
+                            var left = sLocation.right;
+                            var top = sLocation.bottom;
                             var width = container.outerWidth();
                             var height = container.outerHeight();
                             var screenWidth = $(window).width();

@@ -42,4 +42,5 @@ jspm_packages
 # test files
 test.html
 test.js
+jquery.min.js
 icons/*
