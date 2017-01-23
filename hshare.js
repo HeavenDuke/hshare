@@ -205,6 +205,18 @@
             icon: "https://ohtikzqed.bkt.clouddn.com/netvibes.png",
             text: "Netvibes"
         },
+        buffer: {
+            name: "buffer",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/buffer.png",
+            text: "buffer"
+        },
+        hootsuite: {
+            name: "hootsuite",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/hootsuite.png",
+            text: "hootsuite"
+        },
         copyLink: {
             default: false,
             icon: "https://ohtikzqed.bkt.clouddn.com/copylink.png"
@@ -303,6 +315,10 @@
                         return _renderNetvibes(icon);
                     case "pocket":
                         return _renderPocket(icon);
+                    case "buffer":
+                        return _renderBuffer(icon);
+                    case "hootuite":
+                        return _renderHootsuite(icon);
                     default:
                         throw Error("invalid name");
                         break;
@@ -312,6 +328,14 @@
 
         var _renderPocket = function (icon) {
             return "<a class='hshare hshare-" + size + "' href='https://getpocket.com/edit.php?title=" + title + "&url=" + url + "' target='_blank' title='分享到新华微博'><img src=" + icon + " alt='分享到新华微博'/></a>";
+        };
+
+        var _renderBuffer = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='https://buffer.com/add?text=" + title + url + "&url=" + url + "' target='_blank' title='分享到新华微博'><img src=" + icon + " alt='分享到新华微博'/></a>";
+        };
+
+        var _renderHootsuite = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='https://hootsuite.com/hootlet/social-share?title=" + title + "&url=" + url + "' target='_blank' title='分享到新华微博'><img src=" + icon + " alt='分享到新华微博'/></a>";
         };
 
         var _renderXinhua = function (icon) {
