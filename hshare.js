@@ -249,7 +249,7 @@
         },
         more: {
             default: false,
-            icon: "https://ohtikzqed.bkt.clouddn.com/bookmark.png"
+            icon: "https://ohtikzqed.bkt.clouddn.com/more.png"
         }
     };
 
