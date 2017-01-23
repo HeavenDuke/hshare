@@ -217,6 +217,18 @@
             icon: "https://ohtikzqed.bkt.clouddn.com/hootsuite.png",
             text: "hootsuite"
         },
+        digg: {
+            name: "digg",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/digg.png",
+            text: "digg"
+        },
+        chouti: {
+            name: "chouti",
+            default: false,
+            icon: "https://ohtikzqed.bkt.clouddn.com/chouti.png",
+            text: "chouti"
+        },
         copyLink: {
             default: false,
             icon: "https://ohtikzqed.bkt.clouddn.com/copylink.png"
@@ -319,11 +331,23 @@
                         return _renderBuffer(icon);
                     case "hootsuite":
                         return _renderHootsuite(icon);
+                    case "digg":
+                        return _renderDigg(icon);
+                    case "chouti":
+                        return _renderChouti(icon);
                     default:
                         throw Error("invalid name");
                         break;
                 }
             }
+        };
+
+        var _renderChouti = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='http://dig.chouti.com/digg.action?title=" + title + "&newsURL=" + url + "' target='_blank' title='分享到新华微博'><img src=" + icon + " alt='分享到新华微博'/></a>";
+        };
+
+        var _renderDigg = function (icon) {
+            return "<a class='hshare hshare-" + size + "' href='http://digg.com/submit?phase=2&title=" + title + "&url=" + url + "' target='_blank' title='分享到新华微博'><img src=" + icon + " alt='分享到新华微博'/></a>";
         };
 
         var _renderPocket = function (icon) {
