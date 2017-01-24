@@ -512,7 +512,7 @@
                         row.append(element);
                     });
                     content.append(row);
-                    rowData.splice(0, row.length);
+                    rowData.splice(0, rowData.length);
                 }
                 rowData.push(platform);
             }
@@ -531,6 +531,7 @@
         //};
 
         var _calculateLocation = function (ex, ey, ew, eh, width, height, sw, sh) {
+            console.log(ex, ey, ew, eh, width, height, sw, sh)
             var result = {};
             if (ex + ew + width > sw) {
                 result.x = ex - width;
