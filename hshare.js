@@ -461,7 +461,6 @@
             more: true,
             maxCharNum: 5,
             renderText: false,
-            selectShare: false,
             platforms: [],
             extended: []
         };
