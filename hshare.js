@@ -4,8 +4,6 @@
 
 (function ($) {
 
-    'use strict';
-
     var hShare = function (options) {
 
         var platforms = {
@@ -489,7 +487,7 @@
         };
 
         var _renderer = function (platform) {
-            if ($.inArray(platform.name, Object.keys(platforms)) != -1) {
+            if (platforms.hasOwnProperty(platform.name)) {
                 return _defaultRenderer(platform);
             }
             else {
@@ -506,22 +504,22 @@
                 var platform = opts.extended[pIndex];
                 if (rowData.length >= 2) {
                     row = $("<tr></tr>");
-                    rowData.forEach(function (item) {
+                    for(var i = 0; i < rowData.length; i++) {
                         element = $("<td></td>");
-                        element.append(_renderer(item));
+                        element.append(_renderer(rowData[i]));
                         row.append(element);
-                    });
+                    }
                     content.append(row);
                     rowData.splice(0, rowData.length);
                 }
                 rowData.push(platform);
             }
             row = $("<tr></tr>");
-            rowData.forEach(function (item) {
+            for(i = 0; i < rowData.length; i++) {
                 element = $("<td></td>");
-                element.append(_renderer(item));
+                element.append(_renderer(rowData[i]));
                 row.append(element);
-            });
+            }
             content.append(row);
             return container;
         };
@@ -565,14 +563,15 @@
         // Initialize platforms
         opts.platforms = [];
         if (options && (options.platforms instanceof Array)) {
-            options.platforms.forEach(function (platform) {
+            for(var i = 0; i < options.platforms.length; i++) {
+                var platform = options.platforms[i];
                 opts.platforms.push($.extend({}, (platform.name && platforms[platform.name]) ? platforms[platform.name] : {}, platform));
-            });
+            }
         }
         else {
             for (var key in platforms) {
                 if (platforms[key].default) {
-                    opts.platforms.push(Object.create(platforms[key]));
+                    opts.platforms.push(new Object(platforms[key]));
                 }
             }
         }
@@ -580,9 +579,10 @@
         // initialize extended platforms
         opts.extended = [];
         if (options && opts.more == true && (options.extended instanceof Array)) {
-            options.extended.forEach(function (platform) {
+            for(i = 0; i < options.extended.length; i++) {
+                platform = options.extended[i];
                 opts.extended.push($.extend({}, (platform.name && platforms[platform.name]) ? platforms[platform.name] : {}, platform));
-            });
+            }
         }
         else if (opts.more == true) {
             for (var key in platforms) {
@@ -610,9 +610,9 @@
 
             var _platforms = opts.platforms;
 
-            _platforms.forEach(function (platform) {
-                $this.append(_renderer(platform));
-            });
+            for(var i = 0; i < _platforms.length; i++) {
+                $this.append(_renderer(_platforms[i]));
+            }
 
             // Initialize copyLink entry if required
             if (opts.copyLink == true) {
@@ -661,8 +661,8 @@
                     var top = $(this).position().top;
                     var entryWidth = $(this).width();
                     var entryHeight = $(this).height();
-                    var width = morePanel.outerWidth();
-                    var height = morePanel.outerHeight();
+                    var width = morePanel.width();
+                    var height = morePanel.height();
                     var screenWidth = $(window).width();
                     var screenHeight = $(window).height();
                     var location = _calculateLocation(left, top, entryWidth / 2, entryHeight / 2, width, height, screenWidth, screenHeight);

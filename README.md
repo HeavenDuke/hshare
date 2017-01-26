@@ -75,7 +75,7 @@ Here is the option params that we currently support:
 |platforms|platforms that will be shown|---|---|
 |extended|platforms that will be shown in the expanded panel|---|---|
 
-**use the supported platforms(can specify icon):**
+**use the supported platforms(can specify icon & text):**
 ```javascript
 $("#container").hshare({
 	platforms: [{
