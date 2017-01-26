@@ -489,7 +489,7 @@
         };
 
         var _renderer = function (platform) {
-            if (Object.keys(platforms).includes(platform.name)) {
+            if ($.inArray(platform.name, Object.keys(platforms)) != -1) {
                 return _defaultRenderer(platform);
             }
             else {
@@ -603,7 +603,7 @@
         // initialize encoded url and title of hshare
         var url = encodeURIComponent(location.href);
         var title = encodeURIComponent(document.title);
-        var size = sizes.includes(opts.size) ? opts.size : "medium";
+        var size = $.inArray(opts.size, sizes) ? opts.size : "medium";
 
         return this.each(function () {
             var $this = $(this);
