@@ -603,7 +603,7 @@
         // initialize encoded url and title of hshare
         var url = encodeURIComponent(location.href);
         var title = encodeURIComponent(document.title);
-        var size = $.inArray(opts.size, sizes) ? opts.size : "medium";
+        var size = $.inArray(opts.size, sizes) != -1 ? opts.size : "medium";
 
         return this.each(function () {
             var $this = $(this);
