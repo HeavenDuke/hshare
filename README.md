@@ -65,7 +65,6 @@ $("#container").hshare({
 
 Furthur Demo & Documentation is shown below:
 * [Basic Usage](https://github.com/HeavenDuke/hshare/wiki/Basic-Usage)
-* [Rules](https://github.com/HeavenDuke/hshare/wiki/Rules)
 * [Configure a platform](https://github.com/HeavenDuke/hshare/wiki/Configure-a-platform)
 * [Configure a more entry](https://github.com/HeavenDuke/hshare/wiki/Configure-a-more-entry)
 * [Enable statistics](https://github.com/HeavenDuke/hshare/wiki/Enable-statistics)
