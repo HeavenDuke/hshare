@@ -104,4 +104,5 @@ a.hshare-text img {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
+    display: inline-block;
 }

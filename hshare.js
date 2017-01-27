@@ -449,7 +449,7 @@
                 }
             },
             stat: {
-                template: "<a class='#{css} hshare-stat-container'>#{stat}</a>",
+                template: "<div class='#{css} hshare-stat-container'>#{stat}</div>",
                 params: {
                     stat: 0
                 }
@@ -623,6 +623,10 @@
                     opts.extended.push(new Object(plt));
                 }
             }
+        }
+
+        if (opts.extended.length == 0) {
+            opts.more = false;
         }
 
         // initialize encoded url and title of hshare
