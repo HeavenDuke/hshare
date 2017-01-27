@@ -24,6 +24,7 @@ bower install --save bower
 
 **HTML**
 ```html
+<link rel="stylesheet" href="hshare.min.css">
 <script type="text/javascript" href="jquery.min.js"></script>
 <script type="text/javascript" href="hshare.min.js"></script>
 ```
@@ -43,7 +44,7 @@ First specify a container in your html files like this:
 </html>
 ```
 
-Then initialize the social sharing components like in your JavaScript file like this:
+Then initialize the social sharing components in your JavaScript file like this:
 ```javascript
 $("#container").hshare();
 ```
@@ -64,7 +65,6 @@ $("#container").hshare({
 
 Furthur Demo & Documentation is shown below:
 * [Basic Usage](https://github.com/HeavenDuke/hshare/wiki/Basic-Usage)
-* [Rules](https://github.com/HeavenDuke/hshare/wiki/Rules)
 * [Configure a platform](https://github.com/HeavenDuke/hshare/wiki/Configure-a-platform)
 * [Configure a more entry](https://github.com/HeavenDuke/hshare/wiki/Configure-a-more-entry)
 * [Enable statistics](https://github.com/HeavenDuke/hshare/wiki/Enable-statistics)
