@@ -13,7 +13,6 @@
         "sharing"
     ],
     "homepage": "https://github.com/HeavenDuke/hshare",
-    "private": false,
     "ignore": [
         "**/.*",
         "node_modules",
