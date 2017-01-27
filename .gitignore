@@ -38,9 +38,3 @@ jspm_packages
 
 # Webstorm configuration
 .idea/*
-
-# test files
-test.html
-test.js
-jquery.min.js
-icons/*
