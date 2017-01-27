@@ -24,6 +24,7 @@ bower install --save bower
 
 **HTML**
 ```html
+<link rel="stylesheet" href="hshare.min.css">
 <script type="text/javascript" href="jquery.min.js"></script>
 <script type="text/javascript" href="hshare.min.js"></script>
 ```
