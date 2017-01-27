@@ -2,7 +2,7 @@
     "name": "hshare",
     "description": "jquery social sharing plugin",
     "version": "1.0.0",
-    "main": "hshare.min.js",
+    "main": "hshare.js",
     "authors": [
         "HeavenDuke AsherWang"
     ],
