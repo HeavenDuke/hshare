@@ -43,7 +43,7 @@ First specify a container in your html files like this:
 </html>
 ```
 
-Then initialize the social sharing components like in your JavaScript file like this:
+Then initialize the social sharing components in your JavaScript file like this:
 ```javascript
 $("#container").hshare();
 ```
