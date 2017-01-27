@@ -414,7 +414,6 @@
                 }
             }
         };
-
         var addons = {
             copyLink: {
                 template: "<a class='#{css}' title='复制链接'><img align='top' alt='复制链接' src='#{icon}'>#{text}</a>",
@@ -448,6 +447,12 @@
                 params: {
                     icon: "https://heavenduke.github.io/hshare/icons/more.png"
                 }
+            },
+            stat: {
+                template: "<a class='#{css} hshare-stat-container'>#{stat}</a>",
+                params: {
+                    stat: 0
+                }
             }
         };
         var sizes = ["small", "medium", "large"];
@@ -457,7 +462,6 @@
             print: false,
             bookmark: false,
             more: true,
-            maxCharNum: 5,
             renderText: false,
             platforms: [],
             extended: []
@@ -509,7 +513,16 @@
                     row = $("<tr></tr>");
                     for(var i = 0; i < rowData.length; i++) {
                         element = $("<td class='hshare-more-item'></td>");
-                        element.append(_renderer(rowData[i]));
+                        var entry = _renderer(rowData[i]);
+                        element.append(entry);
+                        var name = rowData[i].name;
+                        if (opts.stat instanceof Object) {
+                            entry.on("click", function () {
+                                $.post(opts.stat.updateUrl, {platform: name}, function () {
+                                    statContainer.html(parseInt(statContainer.text().trim()) + 1);
+                                }, 'json');
+                            });
+                        }
                         row.append(element);
                     }
                     content.append(row);
@@ -520,7 +533,16 @@
             row = $("<tr></tr>");
             for(i = 0; i < rowData.length; i++) {
                 element = $("<td class='hshare-more-item'></td>");
-                element.append(_renderer(rowData[i]));
+                var entry = _renderer(rowData[i]);
+                element.append(entry);
+                var name = rowData[i].name;
+                if (opts.stat instanceof Object) {
+                    entry.on("click", function () {
+                        $.post(opts.stat.updateUrl, {platform: name}, function () {
+                            statContainer.html(parseInt(statContainer.text().trim()) + 1);
+                        }, 'json');
+                    });
+                }
                 row.append(element);
             }
             content.append(row);
@@ -607,14 +629,31 @@
         var url = encodeURIComponent(location.href);
         var title = encodeURIComponent(document.title);
         var size = $.inArray(opts.size, sizes) != -1 ? opts.size : "medium";
+        var statContainer = null;
 
         return this.each(function () {
             var $this = $(this);
 
             var _platforms = opts.platforms;
 
+            if (opts.stat instanceof Object) {
+                statContainer = _defaultRenderer(addons.stat);
+                $.get(opts.stat.loadUrl, function (data) {
+                    statContainer.html(data.stat);
+                }, 'json');
+            }
+
             for(var i = 0; i < _platforms.length; i++) {
-                $this.append(_renderer(_platforms[i]));
+                var entry = _renderer(_platforms[i]);
+                var name = _platforms[i].name;
+                if (opts.stat instanceof Object) {
+                    entry.on("click", function () {
+                        $.post(opts.stat.updateUrl, {platform: name}, function () {
+                            statContainer.html(parseInt(statContainer.text().trim()) + 1);
+                        }, 'json');
+                    });
+                }
+                $this.append(entry);
             }
 
             // Initialize copyLink entry if required
@@ -684,6 +723,10 @@
                 $("body").append(morePanel);
                 moreEntry.hover(_hoverin, _hoverout);
                 morePanel.on('mouseout mouseleave', _hoverout);
+            }
+
+            if (opts.stat instanceof Object) {
+                $this.append(statContainer);
             }
 
         });

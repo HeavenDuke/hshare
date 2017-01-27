@@ -63,13 +63,14 @@ a.hshare-text img {
 .hshare-more-header {
     border-bottom: 2px solid #666666;
     height: 20px;
-    background: #CCCCCC;
+    background: #EEEEEE;
 }
 
 .hshare-more-title {
     float: left;
+    padding-left: 10px;
     display: inline-block;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 20px;
     font-weight: bold;
 }
@@ -87,11 +88,20 @@ a.hshare-text img {
 }
 
 .hshare-more-item {
-    padding: 5px 20px 5px 20px;
+    padding: 3px 20px 3px 20px;
 }
 
 .hshare-container {
     position: absolute;
     border: 2px solid black;
     background: #FFFFFF;
+}
+
+.hshare-stat-container {
+    background: #EEEEEE;
+    cursor: none;
+    text-decoration: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
 }
