@@ -53,8 +53,41 @@ a.hshare-text img {
 .hshare-more-container {
     position: absolute;
     display: none;
-    border: 2px solid black;
+    border: 2px solid gray;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     background: #FFFFFF;
+}
+
+.hshare-more-header {
+    border-bottom: 2px solid #666666;
+    height: 20px;
+    background: #CCCCCC;
+}
+
+.hshare-more-title {
+    float: left;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+.hshare-more-close {
+    float: right;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.hshare-more-body {
+    font-size: 15px;
+}
+
+.hshare-more-item {
+    padding: 5px 20px 5px 20px;
 }
 
 .hshare-container {

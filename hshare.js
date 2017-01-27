@@ -5,7 +5,6 @@
 (function ($) {
 
     var hShare = function (options) {
-
         var platforms = {
             qzone: {
                 name: "qzone",
@@ -415,6 +414,7 @@
                 }
             }
         };
+
         var addons = {
             copyLink: {
                 template: "<a class='#{css}' title='复制链接'><img align='top' alt='复制链接' src='#{icon}'>#{text}</a>",
@@ -480,7 +480,7 @@
         var _defaultRenderer = function (platform) {
             platform.params.url = platform.params.url ? platform.params.url : url;
             platform.params.title = platform.params.title ? platform.params.title : title;
-            platform.params.size = platform.params.size ? platform.params.size : size;
+            platform.params.size = size;
             platform.params.text = opts.renderText == true ? platform.params.text : "";
             platform.params.css = platform.params.css ? platform.params.css : "hshare hshare-" + platform.params.size + ( opts.renderText == true ? " hshare-text" : "");
             return _render(platform);
@@ -497,15 +497,18 @@
 
         var _renderMorePanel = function () {
             var container = $("<div class='hshare-more-container'></div>");
+            var header = $("<div class='hshare-more-header'><div class='hshare-more-title'>更多平台</div><div class='hshare-more-close'>×</div></div>");
+            var body = $("<div class='hshare-more-body'></div>");
+            container.append(header).append(body);
             var content = $("<table></table>");
-            container.append(content);
+            body.append(content);
             var rowData = [], row, element;
             for (var pIndex in opts.extended) {
                 var platform = opts.extended[pIndex];
                 if (rowData.length >= 2) {
                     row = $("<tr></tr>");
                     for(var i = 0; i < rowData.length; i++) {
-                        element = $("<td></td>");
+                        element = $("<td class='hshare-more-item'></td>");
                         element.append(_renderer(rowData[i]));
                         row.append(element);
                     }
@@ -516,7 +519,7 @@
             }
             row = $("<tr></tr>");
             for(i = 0; i < rowData.length; i++) {
-                element = $("<td></td>");
+                element = $("<td class='hshare-more-item'></td>");
                 element.append(_renderer(rowData[i]));
                 row.append(element);
             }
@@ -595,7 +598,7 @@
                     }
                 }
                 if (find == false) {
-                    opts.extended.push(plt);
+                    opts.extended.push(new Object(plt));
                 }
             }
         }
@@ -674,6 +677,8 @@
             // Initialize extended entry if required
             if (opts.more == true) {
                 var moreEntry = _defaultRenderer(addons.more);
+                opts.renderText = true;
+                size = "small";
                 var morePanel = _renderMorePanel();
                 $this.append(moreEntry);
                 $("body").append(morePanel);
