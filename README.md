@@ -62,113 +62,13 @@ $("#container").hshare({
 });
 ```
 
-Here is the option params that we currently support:
-
-|name|meaning|value|default|
-|:----:|:----:|:---:|:---:|
-|size|size of the icon|small/medium/large|medium|
-|copyLink|if a copy link entry is included|true/false|false|
-|print|if a print page entry is included|true/false|false|
-|bookmark|if a bookmark entry is included|true/false|false|
-|more|if a "+" is included|true/false|true|
-|renderText|if text is shown|true/false|false|
-|platforms|platforms that will be shown|---|---|
-|extended|platforms that will be shown in the expanded panel|---|---|
-
-**use the supported platforms(can specify icon & text):**
-```javascript
-$("#container").hshare({
-	platforms: [{
-		name: "qzone"
-	}, {
-		name: "douban",
-		icon: "https://somedomain.com/douban_icon.png"
-	}]
-});
-```
-
-**use the supported platforms with text(can specify icon and text):**
-```javascript
-$("#container").hshare({
-    renderText: true,
-	platforms: [{
-		name: "qzone"
-	}, {
-		name: "douban",
-		icon: "https://somedomain.com/douban_icon.png",
-		text: "豆瓣"
-	}]
-});
-```
-
-**use the unsupported platforms:**
-```javascript
-$("#container").hshare({
-	platforms: [{
-		name: "qzone",
-		text: "QQ空间"
-	}, {
-		name: "something",
-		customize: "<a href='some sharing action' target='_blank'><img src='some icon source'></img><a>"
-	}]
-});
-```
-
-**use the print/copyLink/bookmark platforms:**
-```javascript
-$("#container").hshare({
-    bookmark: true,
-    print: true,
-    copyLink: true,
-	platforms: [{
-		name: "qzone",
-		text: "QQ空间"
-	}]
-});
-```
-
-**use the extended platforms(by default it will include all supported platforms):**
-   ```javascript
-   $("#container").hshare({
-       bookmark: true,
-       print: true,
-       copyLink: true,
-       more: true
-   	platforms: [{
-   		name: "qzone",
-   		text: "QQ空间"
-   	}]
-   });
-   ```
-
-**customize the extended platforms:**
-```javascript
-$("#container").hshare({
-    bookmark: true,
-    print: true,
-    copyLink: true,
-    more: true
-	platforms: [{
-		name: "qzone",
-		text: "QQ空间"
-	}],
-	extended: [{
-        name: "pengyou"
-    }, {
-        name: "something",
-        customize: "<a href='some sharing action' target='_blank'><img src='some icon source'></img>Foobar<a>"
-    }]
-});
-```
-
-## Rules:
-* if you don't specify any platform, the first 5 ones will be shown as default ones.
-* Even if only one platform is manually specified, the default one will not be used.
-* If you specify the above platform, you won't need to specify icon resource for the linkage button, they have been included(but you may use your own if you like).
-* Apart from the supported ones, you must specify your own html code for the button.
-* If collapse param is set to true, then all platforms that are no manually specified will be included in the + button.
-* If renderText param is set to true, then size will be disabled and icon size is set to small by default.
-
+Furthur Demo & Documentation is shown below:
+* [Basic Usage](https://github.com/HeavenDuke/hshare/wiki/Basic-Usage)
+* [Rules](https://github.com/HeavenDuke/hshare/wiki/Rules)
+* [Configure a platform](https://github.com/HeavenDuke/hshare/wiki/Configure-a-platform)
+* [Configure a more entry](https://github.com/HeavenDuke/hshare/wiki/Configure-a-more-entry)
+* [Enable statistics](https://github.com/HeavenDuke/hshare/wiki/Enable-statistics)
+* [Supported platforms](https://github.com/HeavenDuke/hshare/wiki/Supported-Platforms)
 
 ## Contributors
 * [HeavenDuke](https://github.com/HeavenDuke)
