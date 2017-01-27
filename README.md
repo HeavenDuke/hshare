@@ -4,7 +4,7 @@ This is a social sharing plugin that allows web developers to include social sha
 
 ## Demo
 
-Here is a demo of the default platforms:
+Here is a demo of the our plugin:
 
 ![demo picture](http://ohtikzqed.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720170121223132.jpg)
 
