@@ -12,11 +12,6 @@ Here is a demo of the our plugin:
 [Platforms](https://github.com/HeavenDuke/hshare/wiki/Supported-Platforms)
 
 ## Install
-**npm**
-```plain
-npm install --save hshare
-```
-
 **bower**
 ```plain
 bower install --save bower
