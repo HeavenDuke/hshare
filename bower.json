@@ -1,0 +1,26 @@
+{
+    "name": "hshare",
+    "description": "jquery social sharing plugin",
+    "main": "hshare.min.js",
+    "authors": [
+        "HeavenDuke AsherWang"
+    ],
+    "license": "MIT",
+    "keywords": [
+        "hshare",
+        "social",
+        "sharing"
+    ],
+    "homepage": "https://github.com/HeavenDuke/hshare",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "jquery": "~2.2.0"
+    }
+}

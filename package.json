@@ -1,4 +1,24 @@
 {
-  "name": "application-name",
-  "version": "0.0.1"
+  "name": "hshare",
+  "version": "0.0.1",
+  "description": "This is a social sharing plugin that allows web developers to include social sharing buttons/links with just some basic configuration. Existing platforms such as bshare/baidushare/jiathis uses **HTTP** protocol to fetch resources which makes it very hard to deploy such services on **HTTPS** pages due to security restriction. This is what triggers this project. Currently it still supports limited number of platform, but I believe that it will be better through time : )",
+  "main": "hshare.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HeavenDuke/hshare.git"
+  },
+  "keywords": [
+    "hshare",
+    "social",
+    "sharing"
+  ],
+  "author": "HeavenDuke AsherWang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HeavenDuke/hshare/issues"
+  },
+  "homepage": "https://github.com/HeavenDuke/hshare#readme"
 }
