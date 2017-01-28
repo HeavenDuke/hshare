@@ -518,7 +518,7 @@
                         var name = rowData[i].name;
                         if (opts.stat instanceof Object) {
                             entry.on("click", function () {
-                                $.post(opts.stat.updateUrl, {platform: name, url: url}, function () {
+                                $.post(opts.stat.updateUrl, {platform: name, url: decodedUrl}, function () {
                                     statContainer.html(parseInt(statContainer.text().trim()) + 1);
                                 }, 'json');
                             });
@@ -631,6 +631,7 @@
 
         // initialize encoded url and title of hshare
         var url = encodeURIComponent(location.href);
+        var decodedUrl = location.href.replace(location.search, "");
         var title = encodeURIComponent(document.title);
         var size = $.inArray(opts.size, sizes) != -1 ? opts.size : "medium";
         var statContainer = null;
@@ -642,7 +643,7 @@
 
             if (opts.stat instanceof Object) {
                 statContainer = _defaultRenderer(addons.stat);
-                $.get(opts.stat.loadUrl, {url: url}, function (data) {
+                $.get(opts.stat.loadUrl, {url: decodedUrl}, function (data) {
                     statContainer.html(data.stat);
                 }, 'json');
             }
@@ -652,7 +653,7 @@
                 var name = _platforms[i].name;
                 if (opts.stat instanceof Object) {
                     entry.on("click", function () {
-                        $.post(opts.stat.updateUrl, {platform: name, url: url}, function () {
+                        $.post(opts.stat.updateUrl, {platform: name, url: decodedUrl}, function () {
                             statContainer.html(parseInt(statContainer.text().trim()) + 1);
                         }, 'json');
                     });
