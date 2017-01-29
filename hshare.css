@@ -58,6 +58,7 @@ a.hshare-text img {
     -moz-border-radius: 5px;
     border-radius: 5px;
     background: #FFFFFF;
+    z-index: 999;
 }
 
 .hshare-more-header {

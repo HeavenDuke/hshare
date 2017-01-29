@@ -549,19 +549,20 @@
             return container;
         };
 
-        var _calculateLocation = function (ex, ey, ew, eh, width, height, sw, sh) {
+        var _calculateLocation = function (ex, ey, width, height, sw, sh) {
+            console.log(ex, ey, width, height, sw, sh);
             var result = {};
-            if (ex + ew + width > sw) {
-                result.x = ex + ew - width;
+            if (ex + width > sw) {
+                result.x = ex - width;
             }
             else {
-                result.x = ex + ew;
+                result.x = ex;
             }
-            if (ey + eh + height > sh) {
-                result.y = ey + eh - height;
+            if (ey + height > sh) {
+                result.y = ey - height;
             }
             else {
-                result.y = ey + eh;
+                result.y = ey;
             }
             return result;
         };
@@ -693,8 +694,8 @@
             var _hoverout = function (event) {
                 var cursorX = event.pageX;
                 var cursorY = event.pageY;
-                var panelLeft = morePanel.position().left;
-                var panelTop = morePanel.position().top;
+                var panelLeft = morePanel.offset().left;
+                var panelTop = morePanel.offset().top;
                 var panelWidth = morePanel.width();
                 var panelHeight = morePanel.height();
                 if (!_isWithinBox(cursorX, cursorY, panelLeft, panelTop, panelWidth, panelHeight)) {
@@ -702,17 +703,15 @@
                 }
             };
 
-            var _hoverin = function () {
+            var _hoverin = function (event) {
                 if (morePanel.css("display") == "none") {
-                    var left = $(this).position().left;
-                    var top = $(this).position().top;
-                    var entryWidth = $(this).width();
-                    var entryHeight = $(this).height();
+                    var left = event.pageX;
+                    var top = event.pageY;
                     var width = morePanel.width();
                     var height = morePanel.height();
                     var screenWidth = $(window).width();
                     var screenHeight = $(window).height();
-                    var location = _calculateLocation(left, top, entryWidth / 2, entryHeight / 2, width, height, screenWidth, screenHeight);
+                    var location = _calculateLocation(left, top, width, height, screenWidth, screenHeight);
                     morePanel.attr("style", "left: " + location.x + "px; top: " + location.y + "px;");
                     morePanel.css('display', "block");
                 }
