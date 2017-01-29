@@ -25,7 +25,7 @@ a.hshare-small {
 
 a.hshare-small img {
     width: 15px;
-    height: 15px;;
+    height: 15px;
 }
 
 a.hshare {
@@ -34,7 +34,6 @@ a.hshare {
     text-decoration: none;
     padding-right: 2px;
     cursor: pointer;
-    vertical-align: top;
 }
 
 a.hshare:hover {
@@ -43,11 +42,11 @@ a.hshare:hover {
     text-decoration: underline;
     padding-right: 2px;
     cursor: pointer;
-    vertical-align: top;
 }
 
 a.hshare-text img {
     padding-right: 2px;
+    vertical-align: top;
 }
 
 .hshare-more-container {
