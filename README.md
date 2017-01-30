@@ -9,7 +9,7 @@ Here is a demo of the our plugin:
 ![demo picture](http://ohtikzqed.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720170121223132.jpg)
 
 ## Supported Platforms
-[Platforms](https://github.com/HeavenDuke/hshare/wiki/Supported-Platforms)
+[Platforms](https://heavenduke.github.io/hshare/docs/Supported%20platforms/)
 
 ## Install
 **bower**
@@ -58,12 +58,10 @@ $("#container").hshare({
 });
 ```
 
-Furthur Demo & Documentation is shown below:
-* [Basic Usage](https://github.com/HeavenDuke/hshare/wiki/Basic-Usage)
-* [Configure a platform](https://github.com/HeavenDuke/hshare/wiki/Configure-a-platform)
-* [Configure a more entry](https://github.com/HeavenDuke/hshare/wiki/Configure-a-more-entry)
-* [Enable statistics](https://github.com/HeavenDuke/hshare/wiki/Enable-statistics)
-* [Supported platforms](https://github.com/HeavenDuke/hshare/wiki/Supported-Platforms)
+For further Documentation please refer to:
+
+* [Documentation](https://heavenduke.github.io/hshare/docs/)
+* [中文文档](https://heavenduke.github.io/hshare/docs_cn/)
 
 ## Contributors
 * [HeavenDuke](https://github.com/HeavenDuke)
