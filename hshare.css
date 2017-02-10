@@ -44,6 +44,10 @@ a.hshare:hover {
     cursor: pointer;
 }
 
+a.hshare-text {
+    line-height: 15px;
+}
+
 a.hshare-text img {
     padding-right: 2px;
     vertical-align: top;
