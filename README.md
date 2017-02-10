@@ -8,6 +8,8 @@ Here is a demo of the our plugin:
 
 ![demo picture](http://ohtikzqed.bkt.clouddn.com/QQ%E5%9B%BE%E7%89%8720170121223132.jpg)
 
+Furthur demo can be found on [Codepen](http://codepen.io/collection/nxZWxJ/).
+
 ## Supported Platforms
 [Platforms](https://heavenduke.github.io/hshare/docs/Supported%20platforms/)
 

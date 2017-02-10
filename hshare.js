@@ -457,7 +457,7 @@
         };
         var sizes = ["small", "medium", "large"];
         var defaults = {
-            size: "small",
+            size: "medium",
             copyLink: true,
             print: false,
             bookmark: false,
@@ -550,7 +550,6 @@
         };
 
         var _calculateLocation = function (ex, ey, width, height, sw, sh) {
-            console.log(ex, ey, width, height, sw, sh);
             var result = {};
             if (ex + width > sw) {
                 result.x = ex - width;
@@ -584,6 +583,7 @@
         };
 
         var opts = options ? $.extend(true, {}, options) : $.extend(true, {}, defaults);
+
         opts.size = opts.renderText == true ? "small" : opts.size;
 
         // Initialize platforms
