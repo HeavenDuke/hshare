@@ -16,7 +16,12 @@ Furthur demo can be found on [Codepen](http://codepen.io/collection/nxZWxJ/).
 ## Install
 **bower**
 ```plain
-bower install --save bower
+bower install --save hshare
+```
+
+**npm**
+```plain
+npm install --save hshare
 ```
 
 **HTML**
